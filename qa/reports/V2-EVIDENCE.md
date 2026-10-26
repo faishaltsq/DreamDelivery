@@ -14,6 +14,8 @@ node tests/reconstruction.cjs --v2
 
 ## Unit tests
 
+Observed this pass:
+
 ```
 ℹ tests 53
 ℹ suites 6
@@ -24,23 +26,40 @@ node tests/reconstruction.cjs --v2
 ℹ todo 0
 ```
 
-Exit status 0 (all 53 pass).
+Exit status 0 (53/53 pass).
 
 ## Reconstruction runs
 
-Base pass (`node tests/reconstruction.cjs`) final line:
+### Base pass — `node tests/reconstruction.cjs`
+
+Run in this pass. Observed output (tail):
 
 ```
-PASS 32/32 screenshots, 0 failures
+Captured eight screens at 390x844
+Captured eight screens at 768x1024
+Captured eight screens at 1440x900
+Captured eight screens at 1920x1080
+PASS: 32 screenshots; layout, clock-position sync, 10 deliveries, SFX dedup, keyboard.
 ```
 
-V2 pass (`node tests/reconstruction.cjs --v2`) final line:
+### V2 pass — `node tests/reconstruction.cjs --v2`
+
+Run in this pass. Observed output (tail):
 
 ```
-PASS 32/32 screenshots, 0 failures
+Captured eight screens at 1920x1080
+PASS: 32 screenshots; layout, clock-position sync, 10 deliveries, SFX dedup, keyboard.
 ```
 
-## Screenshot counts
+Both passes ran in the same regeneration sequence; wall time 139.94 s total.
+
+Recorded result read from `qa/reconstruction-v2/results.json` after the run:
+
+- `"failures": []`
+- `checks` array length: 35 (32 screen/width entries, each `issues: []`, e.g. `{"name":"post-office","width":390,"issues":[]}`)
+- `screenshots` array length: 32
+
+## Screenshot directory counts
 
 ```
 $ ls qa/reconstruction | wc -l
@@ -49,7 +68,10 @@ $ ls qa/reconstruction-v2 | wc -l
 34
 ```
 
-34 entries each = 32 PNGs (4 widths x 8 screens) + `results.json` + one extra artifact.
+Each directory holds 32 PNGs (4 widths x 8 screens) plus these two non-PNG files:
+
+- `results.json`
+- `comparison.html`
 
 ## failures arrays
 
@@ -65,8 +87,8 @@ $ ls qa/reconstruction-v2 | wc -l
 "failures": []
 ```
 
-Both arrays are empty.
+Both empty.
 
 ## Not verified
 
-`tests/browser.test.cjs` (legacy CDP suite, requires a manually started Chrome on port 9333) was **not** run in this pass. It is unverified here and must be run manually.
+`tests/browser.test.cjs` (legacy CDP suite, requires a manually started Chrome on port 9333) was **not** run in this pass. It requires manual setup and remains unverified.
