@@ -1,22 +1,29 @@
 // Sprite atlas animator. Reads animations.json metadata {frames, fps, frameWidth, frameHeight}.
-// Quality note: these atlases are placeholder-animation; driver stays frame-count agnostic so
+// Quality note: atlases are placeholder-animation; this driver stays frame-count agnostic so
 // re-registered professional atlases drop in without code changes.
 export class SpriteAnimator {
-  constructor({ src, frames, fps = 6, frameWidth = 64, frameHeight = 64 }) {
+  constructor({ src, frames, fps = 6, frameWidth = 64, frameHeight = 64, onReady, onError }) {
     this.src = src; this.frames = frames; this.fps = fps;
     this.frameWidth = frameWidth; this.frameHeight = frameHeight;
     this.frame = 0; this.accumulator = 0; this.lastT = null; this.running = false;
+    this.onReady = onReady; this.onError = onError; this.failed = false;
     this.el = document.createElement('canvas');
     this.el.width = frameWidth; this.el.height = frameHeight;
     this.el.className = 'pixel-art';
     this.ctx = this.el.getContext('2d');
     this.image = new Image();
-    this.image.src = src;
+    // P0-4: sprite failure degrades to the caller's fallback UI; it never locks the flow.
+    this.image.addEventListener('error', () => {
+      this.failed = true;
+      this.onError?.();
+    });
+    this.image.addEventListener('load', () => this.onReady?.());
     this.image.decoding = 'async';
+    this.image.src = src;
   }
 
   mount(container) {
-    container.append(this.el);
+    if (!this.failed) container.append(this.el);
     this.start();
     return this;
   }
@@ -35,7 +42,7 @@ export class SpriteAnimator {
   _tick = (t) => {
     if (!this.running) return;
     if (this.lastT == null) this.lastT = t;
-    const dt = (t - this.lastT) / 1000;
+    const dt = Math.min(0.5, (t - this.lastT) / 1000); // clamp tab-suspension jumps
     this.lastT = t;
     if (this.image.complete && this.image.naturalWidth > 0) {
       this.accumulator += dt;

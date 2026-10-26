@@ -26,8 +26,19 @@ export function renderWrite(state) {
 }
 
 export function renderChoose(state) {
-  $('courier-grid').replaceChildren(...Object.values(COURIERS).map(c => courierCard(c, state.courierId === c.id)));
+  const grid = $('courier-grid');
+  const hadFocus = document.activeElement?.dataset?.courier ?? null;
+  grid.replaceChildren(...Object.values(COURIERS).map(c => courierCard(c, state.courierId === c.id)));
   $('btn-confirm-courier').disabled = !state.courierId;
+  // Keep focus on the selected card (arrow-key selection re-renders the group);
+  // fall back to the selected card, else first card, so the group always has exactly one tab stop.
+  const target = (hadFocus && grid.querySelector(`[data-courier=${hadFocus}]`))
+    || grid.querySelector('[aria-checked="true"]')
+    || grid.querySelector('[data-courier]');
+  if (target) {
+    for (const c of grid.querySelectorAll('[data-courier]')) c.tabIndex = c === target ? 0 : -1;
+    if (hadFocus) target.focus();
+  }
 }
 
 function courierCard(c, selected) {
@@ -40,7 +51,7 @@ function courierCard(c, selected) {
   btn.tabIndex = selected ? 0 : -1;
   btn.innerHTML = `
     <img class="frame" src="/assets/ui/card-background.svg" alt="" aria-hidden="true">
-    <img class="face pixel-art" src="/assets/couriers/${c.id}/portrait.png" alt="Portrait of ${c.name}">
+    <img class="face" src="/assets/couriers/${c.id}/portrait.png" alt="Portrait of ${c.name}">
     <span class="name" style="color:${c.accent}">${c.name}</span>
     <span class="role">${c.title}</span>`;
   return btn;

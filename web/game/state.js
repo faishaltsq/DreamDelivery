@@ -133,7 +133,7 @@ export function dispatch(state, action) {
     case 'BEGIN_JOURNEY':
       if (state.screen !== 'route-map' || !state.courierId || !state.sealPlaced) return state;
       if (!ROUTES[action.routeId]) return state;
-      return { ...state, screen: 'journey',
+      return { ...state, screen: 'journey', _delivered: false,
                journey: { routeId: action.routeId, progress: 0 } };
 
     case 'ADVANCE_JOURNEY':
@@ -157,8 +157,11 @@ export function dispatch(state, action) {
 
     case 'FINISH_DELIVERY':
       if (state.screen !== 'encounter') return state;
+      // journey is cleared on transition; a stale second click cannot re-apply
+      if (state._delivered) return state;
       return { ...state,
         screen: 'postcard',
+        _delivered: true,
         letters: [...state.letters, {
           recipient: state.recipient, message: state.message,
           routeId: state.journey.routeId, courierId: state.courierId, at: Date.now(),
