@@ -4,7 +4,7 @@ import {
   renderScreens, renderPostOffice, renderWrite, renderChoose,
   renderJourney, renderEncounter, renderRouteMap, renderPostcard, renderAlbum,
 } from './render/screens.js';
-import { applyAssets, applyScene, preloadScene, loadCourier } from './render/assets.js';
+import { applyAssets, applyScene, preloadScene, loadCourier, ART_TOGGLE } from './render/assets.js';
 import { SpriteAnimator } from './render/sprites.js';
 import { Sfx } from './render/audio.js';
 
@@ -55,7 +55,10 @@ function setState(next) {
   }
   if (state.screen === 'encounter') {
     renderEncounter(state);
-    if (entering) sfx.play('sparkle');
+    if (entering) {
+      sfx.play('sparkle');
+      mountStill(state.courierId ?? 'momo', $('encounter-portrait'));
+    }
   }
   if (state.screen === 'postcard') renderPostcard(state);
   if (state.screen === 'album') renderAlbum(state);
@@ -124,6 +127,24 @@ $('route-grid').addEventListener('click', (event) => {
   setState(dispatch(state, { type: 'BEGIN_JOURNEY', routeId: card.dataset.route }));
 });
 
+// One scale for every courier in a scene, so Momo cannot grow twice Lune's size on the same path.
+const stageScale = scene => Math.max(1, Math.min(2, Math.floor(scene.clientWidth / 450) + 1));
+
+function mountStill(id, container) {
+  container.replaceChildren();
+  loadCourier(id, 'idle').then(asset => {
+    if (container.childElementCount) return;
+    // Stills are fixed-size: the portrait row already reserves their space, so scale 1 keeps the
+    // figure honest against the panel instead of blooming past its slot.
+    const still = new SpriteAnimator({ ...asset }).mount(container, { maxScale: 1 });
+    still.el.setAttribute('aria-hidden', 'true');
+  }).catch(() => { container.hidden = true; });
+}
+
+// Art never holds the journey hostage. If an atlas is still unresolved after this window the
+// loading text becomes the visible failure text; the clock has run the whole time.
+const ART_STATUS_DEADLINE_MS = 5000;
+
 function startJourney() {
   stopJourney();
   const route = ROUTES[state.journey.routeId];
@@ -148,24 +169,38 @@ function startJourney() {
     if (journeyRun === run) run.raf = requestAnimationFrame(tick);
   }
   run.raf = requestAnimationFrame(tick);
-  void loadCourier(courier.id).then(asset => {
+  const artDeadline = setTimeout(() => {
+    if (journeyRun !== run || !stage.classList.contains('courier-loading')) return;
+    label.textContent = `${courier.name}'s artwork is taking too long. Delivery continues.`;
+  }, ART_STATUS_DEADLINE_MS);
+  const settleArt = () => clearTimeout(artDeadline);
+  void loadCourier(courier.id, 'journey').then(asset => {
     if (journeyRun !== run) return;
     animator = new SpriteAnimator({
       ...asset,
       onReady: () => {
+        settleArt();
         if (journeyRun !== run) return;
-        label.remove();
+        // Substituted state frames stay visible as text, never as silent art quality.
+        if (asset.substitute) label.textContent = `${courier.name}'s ${asset.state} frames could not load. Showing ${asset.animation}. Delivery continues.`;
+        else label.remove();
         stage.classList.remove('courier-loading');
+        stage.dataset.courierAnimation = asset.animation || 'walk';
       },
       onError: () => {
+        settleArt();
         if (journeyRun !== run) return;
         stage.classList.add('courier-loading');
         label.textContent = `${courier.name}'s artwork could not load. Delivery continues.`;
       },
-    }).mount(stage);
+    }).mount(stage, { maxScale: stageScale(stage.closest('.scene')) });
     animator.el.setAttribute('aria-hidden', 'true');
   }).catch(() => {
-    if (journeyRun === run) label.textContent = `${courier.name}'s artwork could not load. Delivery continues.`;
+    settleArt();
+    // No atlas at all: say so, and keep the journey clock running.
+    if (journeyRun !== run) return;
+    stage.classList.add('courier-loading');
+    label.textContent = `${courier.name}'s artwork could not load. Delivery continues.`;
   });
 }
 
@@ -182,6 +217,8 @@ $('btn-continue').addEventListener('click', () => {
 $('btn-again').addEventListener('click', () => setState(dispatch(state, { type: 'RESET' })));
 addEventListener('pagehide', stopJourney);
 addEventListener('resize', () => { if (state.screen === 'journey') renderJourney(state); });
+// Declares the active art tier once; CSS keys variant-only presentation off it (no dev chrome).
+document.documentElement.dataset.art = ART_TOGGLE.read(location.search) ? 'v2' : 'v1';
 renderScreens(state);
 renderPostOffice(state);
 void applyAssets($('screen-post-office'));

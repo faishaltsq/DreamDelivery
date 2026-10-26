@@ -1,0 +1,365 @@
+{
+  "count": 72,
+  "files": [
+    {
+      "path": "PREVIEW-CATALOG.jpg",
+      "bytes": 308860,
+      "sha256": "8096655c6da33adbd0ac363f163a584c95eafb0400a44d26bc18b2b95ac2410f"
+    },
+    {
+      "path": "AGENT-INTEGRATION.md",
+      "bytes": 2124,
+      "sha256": "a435479dd6edf63f975b816a1cd02fb900b6895e77cbd62015c069d2efe4fbbe"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1419,
+      "sha256": "6a1ac5619e663f7e1a9b97c372dc81a86ace591c401e2b29ea773cd42454c161"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 6033,
+      "sha256": "4ef134c9d047b901395b5ddb6cfa5bb00e1c056b1768fe737daab33f481fc7b5"
+    },
+    {
+      "path": "reference/master-original.png",
+      "bytes": 3740776,
+      "sha256": "9e01c234255eb311def47b9076542413a4a37fa582fe6e7ba56a4a6513040f13"
+    },
+    {
+      "path": "reference/generated-board-b.png",
+      "bytes": 3081646,
+      "sha256": "28560cfaa7a7a62fb44c5ffc09f9865d88e72f86b1362ea3c52abf0af3b59592"
+    },
+    {
+      "path": "reference/generated-board-a.png",
+      "bytes": 3021186,
+      "sha256": "141b472ff144acf4dc2a1ab0b699a5d8eb7df1b29dd1121363b372f4607039d9"
+    },
+    {
+      "path": "assets/v2/ui/parchment-panel.svg",
+      "bytes": 1852,
+      "sha256": "96da9d5a091ae6836aba7eb8d5671b349330db63a75a120d92c725ba1fcb4dc8"
+    },
+    {
+      "path": "assets/v2/ui/tab-active.svg",
+      "bytes": 191,
+      "sha256": "c98af6b5b06b8cec849443d3a3d6d6ec4b4a8985dc1cac2491f348a89a3004ce"
+    },
+    {
+      "path": "assets/v2/ui/textarea-frame.svg",
+      "bytes": 264,
+      "sha256": "e2f9eccca420dea7a2f3ae3c068d014546022d0f3a46887e183cb7c888a3cc61"
+    },
+    {
+      "path": "assets/v2/ui/input-frame.svg",
+      "bytes": 260,
+      "sha256": "e8ebe472b0817ec734d07d3edff1266c0f851964c0cc75da972e17fb436bbc43"
+    },
+    {
+      "path": "assets/v2/ui/modal-frame.svg",
+      "bytes": 1852,
+      "sha256": "435c0e89130e941e69f445a35e787c8754c0bd79b66c39c9a5eb790870fe7bdd"
+    },
+    {
+      "path": "assets/v2/ui/divider-stars.svg",
+      "bytes": 261,
+      "sha256": "573be8b06b4c3d9dfc1057dc28d038d02eb049f563efa081bda5883adf17c647"
+    },
+    {
+      "path": "assets/v2/ui/inventory-slot.svg",
+      "bytes": 397,
+      "sha256": "7c0103c1e5fcabbfbe8fead477da91604b6bc06e9ce3076a63807c6803937f62"
+    },
+    {
+      "path": "assets/v2/ui/tab-inactive.svg",
+      "bytes": 191,
+      "sha256": "9856a405ae468767b239fbe50934e6fc43f513efd921052ddaddbf90eb09f488"
+    },
+    {
+      "path": "assets/v2/ui/progress-track.svg",
+      "bytes": 258,
+      "sha256": "cfbbe3c0e5c4aaec77e2171f77b5d6c3f6e83f99257491318dc57331076e56c2"
+    },
+    {
+      "path": "assets/v2/ui/card.svg",
+      "bytes": 1852,
+      "sha256": "2ff5887c4cb4552d42a961506b30bd68f4455a65ef99ccc95924136887011c49"
+    },
+    {
+      "path": "assets/v2/ui/wax-seal.svg",
+      "bytes": 353,
+      "sha256": "0d158f60f5d204a2c05331cc605718365bdc51dd30125a83399c92b60927a1e7"
+    },
+    {
+      "path": "assets/v2/ui/moon-icon.svg",
+      "bytes": 343,
+      "sha256": "1e9313a751a5db4261631b7310064397d1c314b6e9a461d8ffb4966fd69556be"
+    },
+    {
+      "path": "assets/v2/ui/tokens.css",
+      "bytes": 541,
+      "sha256": "cf969ecd40cb96bf3462d36e11dfd4b04f4b1f43cbe2375725734c8000828460"
+    },
+    {
+      "path": "assets/v2/ui/notification.svg",
+      "bytes": 399,
+      "sha256": "959b81cded69d0e7d6647494898695373345a43ca2fb7b998712032e4b2a2abb"
+    },
+    {
+      "path": "assets/v2/ui/postcard-frame.svg",
+      "bytes": 1932,
+      "sha256": "a7b2b5dc2387f4cf5df7bb5a58a8e1c4c3e4c680d5f19c70ade174d85556a42c"
+    },
+    {
+      "path": "assets/v2/ui/button-primary.svg",
+      "bytes": 603,
+      "sha256": "1ca35717104a5c1edb9fb6d898f89b44a049fe0fd4998ab87b2ab1da84910b1c"
+    },
+    {
+      "path": "assets/v2/ui/button-secondary.svg",
+      "bytes": 292,
+      "sha256": "4353e877a9a252753768e306de7378d1f9f060b23c3ed0901ef2a9fd545c11b7"
+    },
+    {
+      "path": "assets/v2/ui/route-card.svg",
+      "bytes": 1852,
+      "sha256": "f0796040b3a26c284cdcf73c998f5d95c69e76a040099890df18a2165e735714"
+    },
+    {
+      "path": "assets/v2/ui/previews/input-frame.png",
+      "bytes": 1596,
+      "sha256": "d935c9e5f8fad4ef7368bb12fb740a919dfc3885161ecb15b9492aafd271175c"
+    },
+    {
+      "path": "assets/v2/ui/previews/moon-icon.png",
+      "bytes": 18215,
+      "sha256": "bd81a6a9b0866bcbca80bd127b7626a7c08aa3a1e6113e600f8894cca94be81a"
+    },
+    {
+      "path": "assets/v2/ui/previews/tab-inactive.png",
+      "bytes": 3281,
+      "sha256": "aa11608763b63b73464921b432e279b3a4e1e0a9d3aefbda65f68dcf85e3dae3"
+    },
+    {
+      "path": "assets/v2/ui/previews/button-secondary.png",
+      "bytes": 4307,
+      "sha256": "be0eeeb7fb111c2c60afc139ea906ceba74e9c40dd1ab01724f6f34541ccd24b"
+    },
+    {
+      "path": "assets/v2/ui/previews/wax-seal.png",
+      "bytes": 24926,
+      "sha256": "f37aa9489787aca01ef1d71ea93dce0593b348e6cab76e5da014cc1e4a927035"
+    },
+    {
+      "path": "assets/v2/ui/previews/button-primary.png",
+      "bytes": 4619,
+      "sha256": "1a13671b956ae82990de152cde6e7643920a75cb82cb662aef8ab27a48e4da3a"
+    },
+    {
+      "path": "assets/v2/ui/previews/inventory-slot.png",
+      "bytes": 9134,
+      "sha256": "9d56ec2db6ded47816ebe496db6f7ca68b2116fdf89d177c371c00862f04caa6"
+    },
+    {
+      "path": "assets/v2/ui/previews/divider-stars.png",
+      "bytes": 1744,
+      "sha256": "3bdb7bc98033f06c1dc9f747bc5fbb4791fe5a202fdc8a116dd210d3edd42bd7"
+    },
+    {
+      "path": "assets/v2/ui/previews/postcard-frame.png",
+      "bytes": 7138,
+      "sha256": "81beaa2af31468f0cebe137d0c005e4a0904cc6c44b50af325353a57ad7eda84"
+    },
+    {
+      "path": "assets/v2/ui/previews/notification.png",
+      "bytes": 3233,
+      "sha256": "330fac35de594a76a7dc797e472e490d17182ad36461bdd6aec59ed179b91890"
+    },
+    {
+      "path": "assets/v2/ui/previews/modal-frame.png",
+      "bytes": 8750,
+      "sha256": "9331155dcd9426e46735fcf5d756cf9b2e53129c10f4bf0e2e167e066353e0f2"
+    },
+    {
+      "path": "assets/v2/ui/previews/progress-track.png",
+      "bytes": 1486,
+      "sha256": "b82f7898de3239c4d3c3b04d5c9bc26eb7ff0b2608edb4f2d7d762b6c150f718"
+    },
+    {
+      "path": "assets/v2/ui/previews/card.png",
+      "bytes": 15295,
+      "sha256": "98638af7e809845d6b68b2ca792d7cd95955213725e55f7409dd9729aee6eef4"
+    },
+    {
+      "path": "assets/v2/ui/previews/tab-active.png",
+      "bytes": 3297,
+      "sha256": "2f6cd40c676aa5c2831f4cdf0595b902f735c0546846dd0091eb5c9d44f3086b"
+    },
+    {
+      "path": "assets/v2/ui/previews/route-card.png",
+      "bytes": 8297,
+      "sha256": "22f55428987ec53cac24678ba98ce090d7714b01880e1557ef3361e1b19f560f"
+    },
+    {
+      "path": "assets/v2/ui/previews/textarea-frame.png",
+      "bytes": 2168,
+      "sha256": "2311b000b60d1bed0a959b9ff4a9f8cb4bf2ea8e69b785542f4a47b67dbe3619"
+    },
+    {
+      "path": "assets/v2/ui/previews/parchment-panel.png",
+      "bytes": 8076,
+      "sha256": "842e2b69e9c359ca1259caec3fcd8709ff675a13c558c91df3a4103ac166ec91"
+    },
+    {
+      "path": "assets/v2/environments/moonfield/river-background.webp",
+      "bytes": 259820,
+      "sha256": "029e18fd0857e646208c9d0a5780b68fb83d648cd2cac60c9b819b15ab41878b"
+    },
+    {
+      "path": "assets/v2/environments/moonfield/river-background-native.png",
+      "bytes": 141762,
+      "sha256": "f7645f27a0dfebd80f0d894fc93c053fb472f1e16744b4f073debeb5c982970a"
+    },
+    {
+      "path": "assets/v2/environments/moonfield/background.webp",
+      "bytes": 300270,
+      "sha256": "b1cfbfbb8fbc2e4bf2d0f84353bbd346d5f3835efbfaf251cc72cab38a85a81c"
+    },
+    {
+      "path": "assets/v2/environments/moonfield/river-background-1280.webp",
+      "bytes": 105520,
+      "sha256": "e8d39e605267f9e84da474ca807c8881c5f3166ab53f3f9cf6323d106f7eba1f"
+    },
+    {
+      "path": "assets/v2/environments/moonfield/background-native.png",
+      "bytes": 113532,
+      "sha256": "7a3620ae450ee20935c724858e4c84c11e9140867af5f83f9b290368d25173ff"
+    },
+    {
+      "path": "assets/v2/environments/moonfield/background-1280.webp",
+      "bytes": 121018,
+      "sha256": "a003613b0e95047b2d36e3f65ad3cb90d466879958aa169ce3976569e1a1f9bd"
+    },
+    {
+      "path": "assets/v2/environments/post-office-interior/empty-background-native.png",
+      "bytes": 155469,
+      "sha256": "65382487423c6084f608a315aa9d8b158f47edb58d0fab674d586a462dff24dc"
+    },
+    {
+      "path": "assets/v2/environments/post-office-interior/empty-background-1280.webp",
+      "bytes": 141830,
+      "sha256": "70def817864d72358fa32124469fef2bb912ca2490771454aec22d5af5d4ece8"
+    },
+    {
+      "path": "assets/v2/environments/post-office-interior/background.webp",
+      "bytes": 435164,
+      "sha256": "145a9de3324507af5fdf3bb3566c4cc74cb2a8cc656687e870b7037d1e78520c"
+    },
+    {
+      "path": "assets/v2/environments/post-office-interior/empty-background.webp",
+      "bytes": 346432,
+      "sha256": "076e73e829cdd397ca8b1a080cadd3bdcf5af9dbc45e09c2a741bfca9acf34e7"
+    },
+    {
+      "path": "assets/v2/environments/post-office-interior/background-native.png",
+      "bytes": 279298,
+      "sha256": "93e6e23baca3d83055591f8f30d6214d12f9703a3082228558ed2efb3868cf36"
+    },
+    {
+      "path": "assets/v2/environments/post-office-interior/background-1280.webp",
+      "bytes": 178222,
+      "sha256": "37f877e4b947f4a0de96fa9ceecd7bb3a9f493180c5e8175dcb01d0eb39439f0"
+    },
+    {
+      "path": "assets/v2/couriers/momo/walk.png",
+      "bytes": 2482,
+      "sha256": "24db4a634e4d48bce2ec5df703e684e7cb4dba3014237ec3d6d724b6787af9e4"
+    },
+    {
+      "path": "assets/v2/couriers/momo/walk-alt.png",
+      "bytes": 2797,
+      "sha256": "c3042de94438d76cdcb4a117b23665e3c386a9ecc977e01b5c8d30ce41949cc0"
+    },
+    {
+      "path": "assets/v2/couriers/momo/portrait-256.png",
+      "bytes": 22125,
+      "sha256": "0621dc741030b22fb176f8ac07533ab621665a512b1c5b7e2071421b4d7fb049"
+    },
+    {
+      "path": "assets/v2/couriers/momo/portrait.png",
+      "bytes": 23555,
+      "sha256": "5768f0bdd160001ab8ccd7992bd0a10138b2423a40e90f48b46e79b393fceb0a"
+    },
+    {
+      "path": "assets/v2/couriers/momo/rest.png",
+      "bytes": 2371,
+      "sha256": "047c643a843285898acd2e8bce493f8ad0fef35b2d306c4fa55e4fa6fca3add4"
+    },
+    {
+      "path": "assets/v2/couriers/momo/idle-alt.png",
+      "bytes": 2426,
+      "sha256": "40e71d0329f5fe1cedc9ab62217bbf04fce32dfac95fefec1742efcfe802707c"
+    },
+    {
+      "path": "assets/v2/couriers/momo/reaction.png",
+      "bytes": 2523,
+      "sha256": "3331f674a020df055e68e2bb346fe32193451f843e356273cef5aa7f76326f91"
+    },
+    {
+      "path": "assets/v2/couriers/momo/sprite.png",
+      "bytes": 2652,
+      "sha256": "824ecebe4ccea3b4f79498f68fdfdb4c7c6263c00a5ac565838c213d774cc460"
+    },
+    {
+      "path": "assets/v2/couriers/momo/idle.png",
+      "bytes": 2602,
+      "sha256": "7ec740af609dae6cf4f6c2eed632aa8efad92fd9df3c2d2ec5934b35144314e5"
+    },
+    {
+      "path": "assets/v2/couriers/momo/manifest.json",
+      "bytes": 1111,
+      "sha256": "4bc6a7b7429c3bce5888d57fd41f2fa9d5d5503bcc8ae9ea4a5dec3673ec5501"
+    },
+    {
+      "path": "assets/v2/couriers/momo/run.png",
+      "bytes": 2428,
+      "sha256": "2b6a161bb6f0f541ac3be5ed05f354d1b02c8b9dbbdc84ec6080f9ce23d2979b"
+    },
+    {
+      "path": "assets/v2/couriers/momo/jump.png",
+      "bytes": 2775,
+      "sha256": "03a5dcdee586df61a61a8a1634792598fe103d892dab86ed836ed64917fccf1b"
+    },
+    {
+      "path": "assets/v2/couriers/momo/sleep.png",
+      "bytes": 2712,
+      "sha256": "bee83569dff2c0f06c622829e11119746895ffa205ce4c77f820356abbe9478f"
+    },
+    {
+      "path": "assets/v2/couriers/momo/fly.png",
+      "bytes": 2467,
+      "sha256": "66f95eec077722dd95d2fdc2cb7224aa16ef643842020e38bfc624e3bbb0289c"
+    },
+    {
+      "path": "assets/v2/couriers/momo/animations/walk.png",
+      "bytes": 7542,
+      "sha256": "c14ae312fde7325ef4e11d13f1eb1e404b39f4c58e6c4c06c02eb6c93718f842"
+    },
+    {
+      "path": "assets/v2/couriers/momo/animations/reaction.png",
+      "bytes": 7713,
+      "sha256": "d2f65c35a2f8fe2d357884a3f231de2234d05a85f7ac37487ecc6cd650eae6a9"
+    },
+    {
+      "path": "assets/v2/couriers/momo/animations/idle.png",
+      "bytes": 5143,
+      "sha256": "0d4464f3ad21e5795c4f9b13dfacff5c1cf136ac7095532d47c1e89800343b6d"
+    },
+    {
+      "path": "assets/v2/couriers/momo/animations/sleep.png",
+      "bytes": 5118,
+      "sha256": "e25ede42675a838ebf24b30447a3930840dba978811f2931035588e78b5b62fa"
+    }
+  ]
+}

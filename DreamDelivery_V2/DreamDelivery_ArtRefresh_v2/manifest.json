@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 2,
+  "project": "Dream Delivery",
+  "status": "INTEGRATION_CANDIDATE_NOT_PRODUCTION_READY",
+  "generatedOn": "2026-10-26",
+  "reference": "reference/master-original.png",
+  "importantNotice": "Native board panels were only a few hundred pixels wide. 2560x1440 WebP exports are resampled for integration/testing and MUST NOT be represented as true high-detail 2560x1440 art. Independent HD reillustration is required.",
+  "assetRoot": "/assets/v2",
+  "environmentCandidates": {
+    "post-office-interior": {
+      "path": "/assets/v2/environments/post-office-interior/background.webp",
+      "webp1280": "/assets/v2/environments/post-office-interior/background-1280.webp",
+      "sourceNative": "/assets/v2/environments/post-office-interior/background-native.png",
+      "originalCropPx": [
+        516,
+        245
+      ],
+      "exportCanvasPx": [
+        2560,
+        1440
+      ],
+      "quality": "UPSCALED_PREVIEW_NOT_NATIVE_HD",
+      "source": "a_wide_high_resolution_neatly_organized_presenta.png",
+      "rect": [
+        1008,
+        41,
+        1528,
+        290
+      ],
+      "notes": "Independent crop from illustrated presentation board; resolution is insufficient for production fullscreen art."
+    },
+    "moonfield": {
+      "path": "/assets/v2/environments/moonfield/background.webp",
+      "webp1280": "/assets/v2/environments/moonfield/background-1280.webp",
+      "sourceNative": "/assets/v2/environments/moonfield/background-native.png",
+      "originalCropPx": [
+        319,
+        155
+      ],
+      "exportCanvasPx": [
+        2560,
+        1440
+      ],
+      "quality": "UPSCALED_PREVIEW_NOT_NATIVE_HD",
+      "source": "a_wide_high_resolution_neatly_organized_presenta.png",
+      "rect": [
+        545,
+        331,
+        868,
+        490
+      ],
+      "notes": "Independent crop from illustrated presentation board; resolution is insufficient for production fullscreen art."
+    },
+    "post-office-interior-empty": {
+      "path": "/assets/v2/environments/post-office-interior/empty-background.webp",
+      "webp1280": "/assets/v2/environments/post-office-interior/empty-background-1280.webp",
+      "sourceNative": "/assets/v2/environments/post-office-interior/empty-background-native.png",
+      "originalCropPx": [
+        351,
+        200
+      ],
+      "exportCanvasPx": [
+        2560,
+        1440
+      ],
+      "quality": "UPSCALED_PREVIEW_NOT_NATIVE_HD",
+      "source": "a_detailed_colorful_concept_art_style_asset_pack.png",
+      "rect": [
+        787,
+        41,
+        1142,
+        245
+      ],
+      "notes": "Independent crop from illustrated presentation board; resolution is insufficient for production fullscreen art."
+    },
+    "moonfield-river": {
+      "path": "/assets/v2/environments/moonfield/river-background.webp",
+      "webp1280": "/assets/v2/environments/moonfield/river-background-1280.webp",
+      "sourceNative": "/assets/v2/environments/moonfield/river-background-native.png",
+      "originalCropPx": [
+        432,
+        148
+      ],
+      "exportCanvasPx": [
+        2560,
+        1440
+      ],
+      "quality": "UPSCALED_PREVIEW_NOT_NATIVE_HD",
+      "source": "a_detailed_colorful_concept_art_style_asset_pack.png",
+      "rect": [
+        253,
+        281,
+        689,
+        433
+      ],
+      "notes": "Independent crop from illustrated presentation board; resolution is insufficient for production fullscreen art."
+    }
+  },
+  "couriers": {
+    "momo": {
+      "id": "momo",
+      "name": "Momo",
+      "quality": "PROTOTYPE_SOURCE_REUSED_ALIGNED_NOT_HAND_ANIMATED",
+      "portrait": "portrait.png",
+      "sprite": "sprite.png",
+      "animations": {
+        "idle": {
+          "file": "animations/idle.png",
+          "frames": 4,
+          "frameWidth": 64,
+          "frameHeight": 64,
+          "fps": 3,
+          "quality": "POSE_REUSE_NOT_FINAL"
+        },
+        "walk": {
+          "file": "animations/walk.png",
+          "frames": 4,
+          "frameWidth": 64,
+          "frameHeight": 64,
+          "fps": 7,
+          "quality": "POSE_REUSE_NOT_FINAL"
+        },
+        "reaction": {
+          "file": "animations/reaction.png",
+          "frames": 4,
+          "frameWidth": 64,
+          "frameHeight": 64,
+          "fps": 5,
+          "quality": "POSE_REUSE_NOT_FINAL"
+        },
+        "sleep": {
+          "file": "animations/sleep.png",
+          "frames": 4,
+          "frameWidth": 64,
+          "frameHeight": 64,
+          "fps": 2,
+          "quality": "POSE_REUSE_NOT_FINAL"
+        }
+      },
+      "recommendedAnchor": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "pixelRendering": "nearest",
+      "sourceNote": "Derived from original prototype artwork, not new full fidelity hand drawn animation."
+    }
+  },
+  "ui": {
+    "root": "/assets/v2/ui",
+    "source": "vector original generated for this pack",
+    "quality": "SCALABLE_SVG_V2_DRAFT",
+    "files": [
+      "parchment-panel",
+      "modal-frame",
+      "postcard-frame",
+      "card",
+      "route-card",
+      "notification",
+      "inventory-slot",
+      "input-frame",
+      "textarea-frame",
+      "button-primary",
+      "button-secondary",
+      "tab-active",
+      "tab-inactive",
+      "divider-stars",
+      "progress-track",
+      "wax-seal",
+      "moon-icon"
+    ]
+  },
+  "plannedReplacement": [
+    {
+      "asset": "post-office-interior/background.webp",
+      "priority": "P0",
+      "qualityNeeded": "native high-detail independent 2560x1440 scene, layered if parallax"
+    },
+    {
+      "asset": "moonfield/background.webp",
+      "priority": "P0",
+      "qualityNeeded": "native high-detail independent 2560x1440 scene, layered if parallax"
+    },
+    {
+      "asset": "couriers/momo/animations/*.png",
+      "priority": "P1",
+      "qualityNeeded": "consistent frame-by-frame pixel art atlas with matching anchors"
+    }
+  ],
+  "renderingContract": {
+    "environment": "smooth; image-rendering auto",
+    "sprites": "nearest; integer scale",
+    "ui": "vector SVG with HTML text over top"
+  }
+}

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dream Delivery</title>
 <link rel="stylesheet" href="./styles/tokens.css">
+<link rel="stylesheet" href="./styles/design-tokens.css">
 <link rel="stylesheet" href="./styles/main.css">
 <link rel="icon" href="/assets/ui/moon-mark.svg" type="image/svg+xml">
 </head>
@@ -42,21 +43,31 @@
 
   <section id="screen-write" class="screen" aria-labelledby="wr-title" hidden>
     <div class="scene">
+      <!-- The letter sits on the bottom desk band of the supplied interior: the sheet is placed
+           above that band in normal flow so the clerk, lamp and window stay visible at 390px and
+           1440px. One chosen scene, no breakpoint art swap. -->
       <img class="scene-bg" data-environment="post-office-interior" src="/assets/environments/post-office-interior/scene-native.png" alt="" aria-hidden="true">
       <div class="vignette" aria-hidden="true"></div>
-      <div class="panel-stack">
+      <div class="panel-stack desk">
         <div class="panel parchment">
           <img class="panel-bg" data-asset="ui.panel" src="/assets/ui/parchment-panel.svg" alt="" aria-hidden="true">
           <div class="panel-body">
             <h1 id="wr-title" class="title">Write Your Letter</h1>
+            <p class="hint">The night clerk is asleep, so the ink and the lamp are yours.</p>
             <form id="write-form">
               <label class="field-label" for="recipient">To (a sleeping dreamer)</label>
-              <input id="recipient" class="input" maxlength="24" placeholder="Dreamer's name" autocomplete="off">
+              <div class="field framed">
+                <input id="recipient" class="input" maxlength="24" placeholder="Dreamer's name" autocomplete="off">
+                <img class="field-frame" data-asset="ui.input" src="/assets/ui/message-input.svg" alt="" aria-hidden="true">
+              </div>
               <label class="field-label" for="message">Your dream letter</label>
-              <textarea id="message" class="input area" rows="4" maxlength="140" placeholder="What would you like to send?"></textarea>
+              <div class="field framed">
+                <textarea id="message" class="input area" rows="4" maxlength="140" placeholder="What would you like to send?"></textarea>
+                <img class="field-frame" data-asset="ui.textarea" src="/assets/ui/message-input.svg" alt="" aria-hidden="true">
+              </div>
               <div class="row-between">
-                <div class="seal-slot" id="seal-slot">
-                  <img id="seal-img" src="/assets/mail/wax-stamp.png" class="pixel-art" alt="Wax seal placed" hidden>
+                <div class="seal-slot" id="seal-slot" data-sealed="false">
+                  <img id="seal-img" src="/assets/ui/mail-seal.svg" class="seal-badge" alt="Wax seal placed" hidden>
                   <span id="seal-hint">No seal yet</span>
                 </div>
                 <button type="submit" id="btn-seal" class="btn primary">
@@ -79,6 +90,7 @@
           <img class="panel-bg" data-asset="ui.panel" src="/assets/ui/parchment-panel.svg" alt="" aria-hidden="true">
           <div class="panel-body">
             <h1 id="ch-title" class="title">Choose Your Courier</h1>
+            <p class="hint sealed-note"><img class="seal-badge small seal-art" src="/assets/ui/mail-seal.svg" alt="" aria-hidden="true">Letter sealed. Someone has to carry it.</p>
             <div id="courier-grid" class="courier-grid" role="radiogroup" aria-label="Courier"></div>
             <button id="btn-confirm-courier" class="btn primary" type="button" disabled>
               <img data-asset="ui.primary" src="/assets/ui/primary-button.svg" alt="" aria-hidden="true"><span>Confirm courier</span>
@@ -94,7 +106,7 @@
       <img class="scene-bg" data-environment="cloudpath" src="/assets/environments/cloudpath/scene-native.png" alt="" aria-hidden="true">
       <div class="vignette" aria-hidden="true"></div>
       <div class="panel-stack">
-        <div class="panel parchment narrow">
+          <div class="panel parchment narrow">
           <img class="panel-bg" data-asset="ui.panel" src="/assets/ui/parchment-panel.svg" alt="" aria-hidden="true">
           <div class="panel-body">
             <h1 id="rm-title" class="title">Choose a Route</h1>
@@ -108,11 +120,18 @@
 
   <section id="screen-journey" class="screen" aria-labelledby="journey-title" hidden>
     <div class="scene">
+      <!-- data-environment-layers is the opt-in hook for registered alternate candidates
+           (e.g. "river") and, later, genuine independent parallax layers. One flat image
+           is never split into fake depth layers. -->
       <img id="journey-bg" class="scene-bg wide" data-environment="moonfield" src="/assets/environments/moonfield/scene-native.png" alt="" aria-hidden="true">
       <div class="vignette" aria-hidden="true"></div>
-      <h1 id="journey-title" class="scene-title">Journey</h1>
+      <div class="journey-title-wrap">
+        <img class="moon-mark" data-asset="ui.moon" src="/assets/ui/moon-mark.svg" alt="" aria-hidden="true">
+        <h1 id="journey-title" class="scene-title">Journey</h1>
+      </div>
       <div id="courier-stage" class="courier-stage"></div>
       <div class="journey-hud">
+        <img class="divider" data-asset="ui.divider" src="/assets/ui/divider.svg" alt="" aria-hidden="true">
         <div class="progress" role="progressbar" aria-label="Delivery progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="journey-progress">
           <img data-asset="ui.progress" src="/assets/ui/progress-track.svg" class="progress-bg" alt="" aria-hidden="true">
           <div class="progress-track"><div class="progress-fill" id="journey-bar"></div></div>
@@ -125,7 +144,6 @@
   <section id="screen-encounter" class="screen" aria-labelledby="encounter-title" hidden>
     <div class="scene">
       <img id="encounter-bg" class="scene-bg wide" data-environment="moonfield" src="/assets/environments/moonfield/scene-native.png" alt="" aria-hidden="true">
-      <img id="encounter-effect" class="encounter-effect pixel-art" src="/assets/effects/moonburst.png" alt="" aria-hidden="true">
       <div class="vignette" aria-hidden="true"></div>
       <div class="panel-stack bottom">
         <div class="panel parchment narrow">
@@ -134,7 +152,6 @@
             <h1 id="encounter-title" class="title small">Encounter</h1>
             <p id="encounter-text" class="story"></p>
             <div class="row-between">
-              <img id="encounter-courier" class="pixel-art enc-courier" data-asset="courier.momo.portrait" src="/assets/couriers/momo/portrait.png" alt="Your courier waiting">
               <button id="btn-continue" class="btn primary" type="button">
                 <img data-asset="ui.primary" src="/assets/ui/primary-button.svg" alt="" aria-hidden="true"><span>Deliver the letter</span>
               </button>
@@ -143,16 +160,21 @@
         </div>
       </div>
     </div>
-  </section>
+    <!-- Encounter still sits over the panel edge, outside the scene flow so it can never
+         squeeze or cover the story column. -->
+    <div class="enc-portrait-row"><div id="encounter-portrait" class="courier-stage enc-courier" role="img" aria-label="Your courier waiting"></div></div>
+</section>
 
   <section id="screen-postcard" class="screen" aria-labelledby="pc-title" hidden>
     <div class="scene center">
       <img class="scene-bg" data-environment="post-office-interior" src="/assets/environments/post-office-interior/scene-native.png" alt="" aria-hidden="true">
       <div class="vignette" aria-hidden="true"></div>
       <div class="postcard">
-        <img class="postcard-frame" data-asset="ui.postcard" src="/assets/ui/postcard-frame.svg" alt="" aria-hidden="true">
         <div class="postcard-inner">
           <div class="pc-left">
+            <!-- Under the v2 skin the delivered location is the full-bleed scene; the framed
+                 sample card repeats the same painting, so it is only used by the v1 skin. -->
+            <p class="pc-place" id="pc-place">Moonfield</p>
             <h1 id="pc-title" class="title small">A dream delivered</h1>
             <img id="pc-photo" class="pc-photo" src="/assets/postcards/moonfield-sample.png" alt="The delivered route, painted postcard">
             <p class="pc-caption" id="pc-caption"></p>
@@ -161,7 +183,7 @@
             <img id="pc-stamp" class="pc-stamp pixel-art" src="/assets/stamps/moonrise.png" alt="Collectible stamp: Moonrise">
             <p class="pc-lines" id="pc-byline">DELIVERED BY<br><strong>MOMO</strong><br>THE CURIOUS CAT</p>
             <p class="pc-to" id="pc-to"></p>
-            <div class="pc-seal"><img class="pixel-art" src="/assets/mail/wax-stamp.png" alt="">Sealed with a dream</div>
+            <div class="pc-seal"><img class="seal-art wax-stamp" src="/assets/ui/mail-seal.svg" width="32" height="32" alt="">Sealed with a dream</div>
           </div>
         </div>
         <button id="btn-again" class="btn primary again" type="button">

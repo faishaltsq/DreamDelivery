@@ -25,7 +25,12 @@ export class SpriteAnimator {
     };
     this.image.onerror = () => this.fail();
     this.image.decoding = 'async';
-    this.image.src = src;
+    try {
+      this.image.src = src;
+    } catch {
+      // A malformed URL must surface as a visible art failure, not an exception that skips onError.
+      queueMicrotask(() => this.fail());
+    }
   }
   fail() {
     if (this.destroyed || this.failed) return;
@@ -34,9 +39,10 @@ export class SpriteAnimator {
     this.stop();
     this.onError?.();
   }
-  mount(container) {
+  mount(container, { maxScale = 3 } = {}) {
     container.append(this.el);
-    const scale = Math.max(1, Math.min(3, Math.floor(container.closest('.scene').clientWidth / 450) + 1));
+    const scale = Math.max(1, Math.min(maxScale, Math.floor(container.closest('.scene').clientWidth / 450) + 1));
+    this.scale = scale;
     this.el.style.width = `${this.frameWidth * scale}px`;
     this.el.style.height = `${this.frameHeight * scale}px`;
     container.style.marginLeft = `${-Math.round(this.frameWidth * scale * this.anchor.x)}px`;

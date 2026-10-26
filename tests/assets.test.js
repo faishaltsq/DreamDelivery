@@ -44,7 +44,9 @@ test('registry declares the exact pending production paths and UI fallbacks', ()
   assert.equal(ASSETS['environment.moonfield'].layers.background.v2[0].src,
     '/assets/v2/environments/moonfield/background.webp');
   assert.equal(ASSETS['courier.momo.portrait'].v2[0].src, '/assets/v2/couriers/momo/portrait.png');
-  for (const id of ['primary', 'secondary', 'panel', 'postcard', 'card', 'slot', 'progress']) {
+  // ui.postcard is intentionally unregistered: the frame is a border-image skin on .postcard only,
+  // so no second decorative <img> can paint over it.
+  for (const id of ['primary', 'secondary', 'panel', 'card', 'slot', 'progress']) {
     assert.match(ASSETS[`ui.${id}`].v2[0].src, /^\/assets\/v2\/ui\/.+\.svg$/);
     assert.match(ASSETS[`ui.${id}`].fallback[0].src, /^\/assets\/ui\/.+\.svg$/);
   }

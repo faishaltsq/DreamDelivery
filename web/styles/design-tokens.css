@@ -1,0 +1,44 @@
+/* DREAM DELIVERY — layout tokens layered on the pack palette in tokens.css.
+   Palette and art-direction values stay in tokens.css; this file owns spacing,
+   panel widths, type scale, radii and stacking. Never redeclare a --dd- colour here. */
+:root {
+  --dd-space-1: 4px;
+  --dd-space-2: 8px;
+  --dd-space-3: 12px;
+  --dd-space-4: 16px;
+  --dd-space-5: 24px;
+  --dd-space-6: 32px;
+  --dd-space-7: 48px;
+
+  /* One content measure per screen role, so no screen invents its own max-width. */
+  --dd-width-compact: 360px;
+  --dd-width-narrow: 470px;
+  --dd-width-panel: 600px;
+  --dd-width-wide: 760px;
+  --dd-width-postcard: 860px;
+
+  --dd-text-xs: .75rem;
+  --dd-text-sm: .875rem;
+  --dd-text-md: 1rem;
+  --dd-text-lg: 1.25rem;
+  --dd-text-title: clamp(1.4rem, 1.1rem + 1.2vw, 2rem);
+  --dd-leading-tight: 1.25;
+  --dd-leading-body: 1.6;
+
+  --dd-radius-sm: 6px;
+  --dd-radius-md: 10px;
+  --dd-radius-lg: 16px;
+
+  /* Stage < scene art < content < HUD < focus ring. */
+  --dd-z-art: -3;
+  --dd-z-shade: -2;
+  --dd-z-content: 0;
+  --dd-z-stage: 1;
+  --dd-z-hud: 2;
+
+  --dd-tap: 44px;
+  --dd-safe-top: max(var(--dd-space-5), env(safe-area-inset-top));
+  --dd-safe-bottom: max(var(--dd-space-5), env(safe-area-inset-bottom));
+  --dd-safe-inline: max(var(--dd-space-4), env(safe-area-inset-left));
+  --dd-nine-slice: 16px;
+}

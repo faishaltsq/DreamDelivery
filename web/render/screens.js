@@ -23,6 +23,7 @@ export function renderWrite(state) {
   $('recipient').value = state.recipient;
   $('message').value = state.message;
   $('seal-img').hidden = !state.sealPlaced;
+  $('seal-slot').dataset.sealed = String(state.sealPlaced);
   $('seal-hint').textContent = state.sealPlaced ? 'Sealed with a dream' : 'No seal yet';
 }
 
@@ -73,7 +74,7 @@ function routeCard(r) {
   btn.className = 'route-card';
   btn.dataset.route = r.id;
   btn.innerHTML = `
-    <img class="frame" data-asset="ui.card" src="/assets/ui/card-background.svg" alt="" aria-hidden="true">
+    <img class="frame" data-asset="ui.route" src="/assets/ui/card-background.svg" alt="" aria-hidden="true">
     <img class="tile" src="${r.tile}" alt="" aria-hidden="true">
     <span class="name">${r.label}</span>`;
   return btn;
@@ -83,8 +84,11 @@ export function renderJourney(state) {
   const route = ROUTES[state.journey?.routeId];
   if (!route) return;
   const background = $('journey-bg');
-  if (background.dataset.environment !== route.id) {
+  // A screen opts into registered alternate layers through data-environment-layers; none are invented.
+  const layers = background.dataset.environmentLayers || '';
+  if (background.dataset.environment !== route.id || background.dataset.sceneLayers !== layers) {
     background.dataset.environment = route.id;
+    background.dataset.sceneLayers = layers;
     void applyScene(background, route.id);
   }
   $('journey-title').textContent = `${route.label} Journey`;
@@ -94,8 +98,11 @@ export function renderJourney(state) {
   const stage = $('courier-stage');
   const scene = stage.closest('.scene');
   const position = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0.5 : 0.14 + progress * 0.72;
+  // The path sits on the moonfield's flowered ground band; re-aimed per layer because the
+  // river alternate trades that band for water. One flat image, no synthesized parallax.
+  const ground = (background.dataset.environmentLayers || '').split(/\s+/).includes('river') ? 0.78 : 0.68;
   stage.style.left = `${Math.round(scene.clientWidth * position)}px`;
-  stage.style.top = `${Math.round(scene.clientHeight * 0.68)}px`;
+  stage.style.top = `${Math.round(scene.clientHeight * ground)}px`;
   stage.dataset.progress = String(progress);
   $('journey-hint').textContent = `${COURIERS[state.courierId ?? 'momo'].name} travels the ${route.label.toLowerCase()}…`;
 }
@@ -105,16 +112,18 @@ export function renderEncounter(state) {
   if (!enc) return;
   $('encounter-title').textContent = enc.title;
   $('encounter-text').textContent = enc.text;
-  $('encounter-effect').src = enc.effectAsset;
+  // enc.effectAsset stays data only: every /assets/effects tile is a prototype contact-sheet
+  // crop (moonburst.png is 44x35 with burned-in caption text), so no overlay is mounted.
   $('encounter-bg').dataset.environment = state.journey.routeId;
+  $('encounter-bg').dataset.sceneLayers = $('encounter-bg').dataset.environmentLayers || '';
   void applyScene($('encounter-bg'), state.journey.routeId);
-  $('encounter-courier').dataset.asset = `courier.${state.courierId ?? 'momo'}.portrait`;
-  $('encounter-courier').src = `/assets/couriers/${state.courierId ?? 'momo'}/portrait.png`;
+  $('encounter-portrait').setAttribute('aria-label', `Your courier, ${COURIERS[state.courierId ?? 'momo'].name}, waiting`);
 }
 
 export function renderPostcard(state) {
   const route = ROUTES[state.journey?.routeId];
   $('pc-photo').src = `/assets/postcards/${route?.id ?? 'moonfield'}-sample.png`;
+  $('pc-place').textContent = route?.label ?? 'Moonfield';
   $('pc-stamp').src = STAMPS[route?.stamp ?? 'moonrise'];
   const courier = COURIERS[state.courierId ?? 'momo'];
   $('pc-byline').innerHTML = `DELIVERED BY<br><strong>${courier.name.toUpperCase()}</strong><br>${courier.title.toUpperCase()}`;
