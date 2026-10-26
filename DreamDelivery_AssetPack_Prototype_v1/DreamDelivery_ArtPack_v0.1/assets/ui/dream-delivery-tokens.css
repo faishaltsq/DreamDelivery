@@ -1,0 +1,20 @@
+/* DREAM DELIVERY — art-directed tokens: do not replace with generic gradients */
+:root{
+  --dd-navy:#20284B;
+  --dd-midnight:#141D38;
+  --dd-lavender:#6864B5;
+  --dd-lilac:#A7A2D2;
+  --dd-cream:#F5E8D5;
+  --dd-paper:#FFF5E8;
+  --dd-peach:#E9AB91;
+  --dd-gold:#EFC477;
+  --dd-ink:#303451;
+  --dd-border:#D7B79D;
+  --dd-radius-card:22px;
+  --dd-radius-button:16px;
+  --dd-shadow-card:0 9px 34px rgba(19,25,61,.22);
+  --dd-focus-ring:0 0 0 3px #EFC477;
+}
+.pixel-art{image-rendering:pixelated;image-rendering:crisp-edges;}
+.dd-text{color:var(--dd-ink);font-family:system-ui,sans-serif;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}}

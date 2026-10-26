@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dream Delivery</title>
+<link rel="stylesheet" href="./styles/tokens.css">
+<link rel="stylesheet" href="./styles/main.css">
+<link rel="icon" href="/assets/ui/moon-mark.svg" type="image/svg+xml">
+</head>
+<body>
+<div id="app" class="app">
+  <!-- 1. Dream Post Office -->
+  <section id="screen-post-office" class="screen" aria-label="Dream Post Office">
+    <div class="scene">
+      <img class="scene-bg pixel-art" src="/assets/environments/post-office-exterior/scene-native.png" alt="" aria-hidden="true">
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="panel-stack">
+        <div class="panel parchment">
+          <img class="panel-bg" src="/assets/ui/parchment-panel.svg" alt="" aria-hidden="true">
+          <div class="panel-body">
+            <img class="logo" src="/assets/branding/logo-illustrated-raster.png" alt="Dream Delivery">
+            <p class="subtitle" id="po-subtitle">The midnight shift begins. A letter waits for a courier.</p>
+            <p class="hint" id="po-welcome-back" hidden></p>
+            <button id="btn-start" class="btn primary">
+              <img src="/assets/ui/primary-button.svg" alt="" aria-hidden="true"><span>Open the doors</span>
+            </button>
+            <div class="po-links">
+              <button id="btn-album" class="btn secondary">
+                <img src="/assets/ui/secondary-button.svg" alt="" aria-hidden="true"><span>Stamp album</span>
+              </button>
+              <button id="btn-audio" class="toggle" aria-pressed="false" title="Prototype tones are off">
+                <span aria-hidden="true">♪</span><span class="toggle-label">Sound off</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <img class="desk-letter pixel-art" src="/assets/mail/wax-envelope.png" alt="A wax-sealed letter waiting on the counter">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Write Letter -->
+  <section id="screen-write" class="screen" aria-labelledby="wr-title" hidden>
+    <div class="scene">
+      <img class="scene-bg pixel-art" src="/assets/environments/post-office-interior/scene-native.png" alt="" aria-hidden="true">
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="panel-stack">
+        <div class="panel parchment">
+          <img class="panel-bg" src="/assets/ui/parchment-panel.svg" alt="" aria-hidden="true">
+          <div class="panel-body">
+            <h1 id="wr-title" class="title">Write Your Letter</h1>
+            <form id="write-form">
+              <label class="field-label" for="recipient">To (a sleeping dreamer)</label>
+              <img class="input-frame" src="/assets/ui/message-input.svg" alt="" aria-hidden="true">
+              <input id="recipient" class="input" maxlength="24" placeholder="Luna of the Hill Farm" autocomplete="off">
+
+              <label class="field-label" for="message">Your dream letter</label>
+              <textarea id="message" class="input area" rows="4" maxlength="140" placeholder="May your harvest moon rise slowly…"></textarea>
+
+              <div class="row-between">
+                <div class="seal-slot" id="seal-slot">
+                  <img id="seal-img" src="/assets/mail/wax-stamp.png" class="pixel-art" alt="Wax seal placed" hidden>
+                  <span id="seal-hint">No seal yet</span>
+                </div>
+                <button type="submit" id="btn-seal" class="btn primary">
+                  <img src="/assets/ui/primary-button.svg" alt="" aria-hidden="true"><span>Seal it</span>
+                  </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Choose Courier -->
+  <section id="screen-choose" class="screen" aria-labelledby="ch-title" hidden>
+    <div class="scene">
+      <img class="scene-bg pixel-art" src="/assets/environments/post-office-interior/scene-native.png" alt="" aria-hidden="true">
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="panel-stack">
+        <div class="panel parchment">
+          <img class="panel-bg" src="/assets/ui/parchment-panel.svg" alt="" aria-hidden="true">
+          <div class="panel-body">
+            <h1 id="ch-title" class="title">Choose Your Courier</h1>
+            <div id="courier-grid" class="courier-grid" role="radiogroup" aria-label="Courier"></div>
+            <button id="btn-confirm-courier" class="btn primary" disabled>
+              <img src="/assets/ui/primary-button.svg" alt="" aria-hidden="true"><span>Confirm courier</span>
+            </button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3b. Route map -->
+  <section id="screen-route-map" class="screen" aria-labelledby="rm-title" hidden>
+    <div class="scene">
+      <img class="scene-bg pixel-art" src="/assets/environments/cloudpath/scene-native.png" alt="" aria-hidden="true">
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="panel-stack">
+        <div class="panel parchment narrow">
+          <img class="panel-bg" src="/assets/ui/parchment-panel.svg" alt="" aria-hidden="true">
+          <div class="panel-body">
+            <h1 id="rm-title" class="title">Choose a Route</h1>
+            <div id="route-grid" class="route-grid"></div>
+            <p class="hint" id="route-hint">Four roads leave the dream post at midnight.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Journey -->
+  <section id="screen-journey" class="screen" aria-labelledby="journey-title" hidden>
+    <div class="scene">
+      <img id="journey-bg" class="scene-bg wide pixel-art" src="/assets/environments/moonfield/scene-native.png" alt="" aria-hidden="true">
+      <div class="vignette" aria-hidden="true"></div>
+      <h1 id="journey-title" class="scene-title">Journey</h1>
+      <div id="courier-stage" class="courier-stage"></div>
+      <div class="journey-hud">
+        <div class="progress" role="progressbar" aria-label="Delivery progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="journey-progress">
+          <img src="/assets/ui/progress-track.svg" class="progress-bg" alt="" aria-hidden="true">
+          <div class="progress-fill" id="journey-bar"></div>
+        </div>
+        <p class="hint" id="journey-hint">Your courier trots across the moonfield…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Encounter -->
+  <section id="screen-encounter" class="screen" aria-labelledby="encounter-title" hidden>
+    <div class="scene">
+      <img id="encounter-bg" class="scene-bg wide pixel-art" src="/assets/environments/moonfield/scene-native.png" alt="" aria-hidden="true">
+      <img id="encounter-effect" class="encounter-effect pixel-art" src="/assets/effects/moonburst.png" alt="" aria-hidden="true">
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="panel-stack bottom">
+        <div class="panel parchment narrow">
+          <img class="panel-bg" src="/assets/ui/parchment-panel.svg" alt="" aria-hidden="true">
+          <div class="panel-body">
+            <h1 id="encounter-title" class="title small">Encounter</h1>
+            <p id="encounter-text" class="story"></p>
+            <div class="row-between">
+              <img id="encounter-courier" class="pixel-art enc-courier" src="/assets/couriers/momo/poses/idle.png" alt="Your courier waiting">
+              <button id="btn-continue" class="btn primary">
+                <img src="/assets/ui/primary-button.svg" alt="" aria-hidden="true"><span>Deliver the letter</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Story Postcard -->
+  <section id="screen-postcard" class="screen" aria-label="Story Postcard" hidden>
+    <div class="scene center">
+      <div class="postcard">
+        <img class="postcard-frame" src="/assets/ui/postcard-frame.svg" alt="" aria-hidden="true">
+        <div class="postcard-inner">
+          <div class="pc-left">
+            <img id="pc-photo" class="pc-photo pixel-art" src="/assets/postcards/moonfield-sample.png" alt="The delivered route, painted postcard">
+            <p class="pc-caption" id="pc-caption">“May your harvest moon rise slowly, Luna."</p>
+          </div>
+          <div class="pc-right">
+            <img id="pc-stamp" class="pc-stamp pixel-art" src="/assets/stamps/moonrise.png" alt="Collectible stamp: Moonrise">
+            <p class="pc-lines" id="pc-byline">DELIVERED BY<br><strong>MOMO</strong><br>THE CURIOUS CAT</p>
+            <p class="pc-to" id="pc-to"></p>
+            <div class="pc-seal"><img class="pixel-art" src="/assets/mail/wax-stamp.png" alt="">Sealed with a dream</div>
+          </div>
+        </div>
+        <button id="btn-again" class="btn primary again">
+          <img src="/assets/ui/primary-button.svg" alt="" aria-hidden="true"><span>Deliver another dream</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Stamp Album -->
+  <section id="screen-album" class="screen" aria-label="Stamp Album" hidden>
+    <div class="scene">
+      <img class="scene-bg pixel-art" src="/assets/environments/post-office-interior/scene-wide-alt.png" alt="" aria-hidden="true">
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="panel-stack">
+        <div class="panel parchment wide">
+          <img class="panel-bg" src="/assets/ui/parchment-panel.svg" alt="" aria-hidden="true">
+          <div class="panel-body">
+            <h1 class="title">Stamp Album</h1>
+            <p class="hint" id="album-count"></p>
+            <div id="album-grid" class="album-grid"></div>
+            <p class="hint" id="album-history"></p>
+            <button id="btn-album-back" class="btn primary">
+              <img src="/assets/ui/primary-button.svg" alt="" aria-hidden="true"><span>Back to the post</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

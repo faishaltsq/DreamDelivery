@@ -1,0 +1,61 @@
+{
+  "courier": "lune",
+  "name": "Lune",
+  "animationFormat": "horizontal sprite atlas",
+  "background": "transparent",
+  "pixelated": true,
+  "animations": {
+    "idle": {
+      "file": "animations/idle.png",
+      "frames": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "fps": 3,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "loop": true,
+      "quality": "placeholder-animation"
+    },
+    "walk": {
+      "file": "animations/walk.png",
+      "frames": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "fps": 7,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "loop": true,
+      "quality": "placeholder-animation"
+    },
+    "fly": {
+      "file": "animations/fly.png",
+      "frames": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "fps": 6,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "loop": true,
+      "quality": "placeholder-animation"
+    },
+    "reaction": {
+      "file": "animations/reaction.png",
+      "frames": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "fps": 4,
+      "anchor": {
+        "x": 0.5,
+        "y": 0.85
+      },
+      "loop": true,
+      "quality": "placeholder-animation"
+    }
+  }
+}

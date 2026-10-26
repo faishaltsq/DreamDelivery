@@ -1,0 +1,235 @@
+path,status,source,dimensions,notes
+assets/branding/logo-illustrated-raster.png,reference-derived,"production-sheet branding 10,30–263,175",253x145,
+assets/branding/logo-and-palette-sheet.png,reference-derived,overview sheet left,271x312,
+assets/branding/hero-art-crop.png,reference-derived,overview hero,597x308,
+assets/environments/post-office-exterior/scene-native.png,reference-derived,production-sheet visual crop,417x284,Native resolution from composite; do not claim high-resolution standalone illustration
+assets/environments/post-office-exterior/scene-preview.webp,prototype-upscaled,Upscaled production-sheet crop,1600x900,"Preview-sized upscale only, not HD source"
+assets/environments/post-office-interior/scene-native.png,reference-derived,production-sheet visual crop,368x204,Native resolution from composite; do not claim high-resolution standalone illustration
+assets/environments/post-office-interior/scene-preview.webp,prototype-upscaled,Upscaled production-sheet crop,1600x900,"Preview-sized upscale only, not HD source"
+assets/environments/cloudpath/scene-native.png,reference-derived,production-sheet visual crop,169x154,Native resolution from composite; do not claim high-resolution standalone illustration
+assets/environments/cloudpath/scene-preview.webp,prototype-upscaled,Upscaled production-sheet crop,1600x900,"Preview-sized upscale only, not HD source"
+assets/environments/moonfield/scene-native.png,reference-derived,production-sheet visual crop,159x154,Native resolution from composite; do not claim high-resolution standalone illustration
+assets/environments/moonfield/scene-preview.webp,prototype-upscaled,Upscaled production-sheet crop,1600x900,"Preview-sized upscale only, not HD source"
+assets/environments/forest-of-whispers/scene-native.png,reference-derived,production-sheet visual crop,170x154,Native resolution from composite; do not claim high-resolution standalone illustration
+assets/environments/forest-of-whispers/scene-preview.webp,prototype-upscaled,Upscaled production-sheet crop,1600x900,"Preview-sized upscale only, not HD source"
+assets/environments/starport/scene-native.png,reference-derived,production-sheet visual crop,180x154,Native resolution from composite; do not claim high-resolution standalone illustration
+assets/environments/starport/scene-preview.webp,prototype-upscaled,Upscaled production-sheet crop,1600x900,"Preview-sized upscale only, not HD source"
+assets/environments/cloudpath/concept-band-1.png,reference-derived,Production sheet illustrated layer references,168x44,
+assets/environments/cloudpath/concept-band-2.png,reference-derived,Production sheet illustrated layer references,168x34,
+assets/environments/cloudpath/concept-band-3.png,reference-derived,Production sheet illustrated layer references,168x29,
+assets/environments/moonfield/concept-band-1.png,reference-derived,Production sheet illustrated layer references,159x45,
+assets/environments/moonfield/concept-band-2.png,reference-derived,Production sheet illustrated layer references,159x34,
+assets/environments/moonfield/concept-band-3.png,reference-derived,Production sheet illustrated layer references,159x28,
+assets/environments/forest-of-whispers/concept-band-1.png,reference-derived,Production sheet illustrated layer references,168x45,
+assets/environments/forest-of-whispers/concept-band-2.png,reference-derived,Production sheet illustrated layer references,168x34,
+assets/environments/forest-of-whispers/concept-band-3.png,reference-derived,Production sheet illustrated layer references,168x28,
+assets/environments/starport/concept-band-1.png,reference-derived,Production sheet illustrated layer references,177x46,
+assets/environments/starport/concept-band-2.png,reference-derived,Production sheet illustrated layer references,177x33,
+assets/environments/starport/concept-band-3.png,reference-derived,Production sheet illustrated layer references,177x28,
+assets/couriers/momo/portrait-native.png,reference-derived,production-sheet left portrait,78x95,
+assets/couriers/momo/portrait.png,cutout-needs-qa,portrait cutout enlarged x4,384x384,Check antialiased cream fringing; source resolution limited
+assets/couriers/momo/poses/idle.png,prototype-extracted,"production-sheet sprite center (125,389)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/walk.png,prototype-extracted,"production-sheet sprite center (166,389)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/run.png,prototype-extracted,"production-sheet sprite center (207,389)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/jump.png,prototype-extracted,"production-sheet sprite center (248,389)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/fly.png,prototype-extracted,"production-sheet sprite center (289,389)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/sleep.png,prototype-extracted,"production-sheet sprite center (330,389)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/idle-alt.png,prototype-extracted,"production-sheet sprite center (125,437)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/walk-alt.png,prototype-extracted,"production-sheet sprite center (166,437)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/run-alt.png,prototype-extracted,"production-sheet sprite center (207,437)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/special.png,prototype-extracted,"production-sheet sprite center (248,437)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/reaction.png,prototype-extracted,"production-sheet sprite center (289,437)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses/rest.png,prototype-extracted,"production-sheet sprite center (330,437)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/momo/poses-atlas.png,prototype-extracted,composited pose previews,384x128,
+assets/couriers/momo/animations/idle.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/momo/animations/walk.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/momo/animations/fly.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/momo/animations/reaction.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/lune/portrait-native.png,reference-derived,production-sheet left portrait,78x95,
+assets/couriers/lune/portrait.png,cutout-needs-qa,portrait cutout enlarged x4,384x384,Check antialiased cream fringing; source resolution limited
+assets/couriers/lune/poses/idle.png,prototype-extracted,"production-sheet sprite center (125,522)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/walk.png,prototype-extracted,"production-sheet sprite center (166,522)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/run.png,prototype-extracted,"production-sheet sprite center (207,522)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/jump.png,prototype-extracted,"production-sheet sprite center (248,522)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/fly.png,prototype-extracted,"production-sheet sprite center (289,522)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/sleep.png,prototype-extracted,"production-sheet sprite center (330,522)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/idle-alt.png,prototype-extracted,"production-sheet sprite center (125,568)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/walk-alt.png,prototype-extracted,"production-sheet sprite center (166,568)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/run-alt.png,prototype-extracted,"production-sheet sprite center (207,568)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/special.png,prototype-extracted,"production-sheet sprite center (248,568)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/reaction.png,prototype-extracted,"production-sheet sprite center (289,568)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses/rest.png,prototype-extracted,"production-sheet sprite center (330,568)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/lune/poses-atlas.png,prototype-extracted,composited pose previews,384x128,
+assets/couriers/lune/animations/idle.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/lune/animations/walk.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/lune/animations/fly.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/lune/animations/reaction.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/pip/portrait-native.png,reference-derived,production-sheet left portrait,81x94,
+assets/couriers/pip/portrait.png,cutout-needs-qa,portrait cutout enlarged x4,384x384,Check antialiased cream fringing; source resolution limited
+assets/couriers/pip/poses/idle.png,prototype-extracted,"production-sheet sprite center (125,643)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/walk.png,prototype-extracted,"production-sheet sprite center (166,643)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/run.png,prototype-extracted,"production-sheet sprite center (207,643)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/jump.png,prototype-extracted,"production-sheet sprite center (248,643)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/fly.png,prototype-extracted,"production-sheet sprite center (289,643)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/sleep.png,prototype-extracted,"production-sheet sprite center (330,643)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/idle-alt.png,prototype-extracted,"production-sheet sprite center (125,692)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/walk-alt.png,prototype-extracted,"production-sheet sprite center (166,692)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/run-alt.png,prototype-extracted,"production-sheet sprite center (207,692)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/special.png,prototype-extracted,"production-sheet sprite center (248,692)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/reaction.png,prototype-extracted,"production-sheet sprite center (289,692)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses/rest.png,prototype-extracted,"production-sheet sprite center (330,692)",64x64,Pose reference; NOT a professionally frame-registered animation
+assets/couriers/pip/poses-atlas.png,prototype-extracted,composited pose previews,384x128,
+assets/couriers/pip/animations/idle.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/pip/animations/walk.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/pip/animations/fly.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/couriers/pip/animations/reaction.png,placeholder-animation,procedural atlas from concept pose cuts,256x64,Frames re-use concept poses; requires animator QA
+assets/mail/letter-paper.png,reference-derived,source: stationery panel,75x97,
+assets/mail/wax-envelope.png,reference-derived,source: stationery panel,78x74,
+assets/mail/postcard-moon.png,reference-derived,source: stationery panel,63x78,
+assets/mail/postcard-cloud.png,reference-derived,source: stationery panel,107x86,
+assets/mail/letter-stationery.png,reference-derived,source: stationery panel,86x68,
+assets/mail/wax-stamp.png,reference-derived,source: stationery panel,54x48,
+assets/icons/items/sun-stamp.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/moon-stamp.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/lilac-flower.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/sun-coin.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/blue-flower.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/gold-coin.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/journal.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/gold-leaf.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/dream-crystal.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/wax-seal.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/little-star.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/sparkle.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/leaf.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/pink-flower.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/mailbox.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/clover.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/potion.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/red-flower.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/green-leaf.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/feather.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/wagon.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/key.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/flower-bundle.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/wooden-coin.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/map-scroll.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/chest.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/blue-coin.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/silver-coin.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/pinwheel.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/cherry-blossom.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/brown-relic.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/crown.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/mail-package.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/green-crystal.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/ice-crystal.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/icons/items/night-seal.png,prototype-extracted,cropped item icon from production sheet,64x64,
+assets/stamps/moonrise.png,prototype-extracted,production-sheet collectible stamps,50x67,
+assets/stamps/castle.png,prototype-extracted,production-sheet collectible stamps,50x67,
+assets/stamps/dream-forest.png,prototype-extracted,production-sheet collectible stamps,50x67,
+assets/stamps/windmill.png,prototype-extracted,production-sheet collectible stamps,50x67,
+assets/stamps/portal-forest.png,prototype-extracted,production-sheet collectible stamps,50x67,
+assets/stamps/twilight-port.png,prototype-extracted,production-sheet collectible stamps,50x67,
+assets/stamps/crescent.png,prototype-extracted,production-sheet collectible stamps,50x67,
+assets/stamps/floating-city.png,prototype-extracted,production-sheet collectible stamps,50x67,
+assets/stamps/starry-night.png,prototype-extracted,production-sheet collectible stamps,50x67,
+assets/relics/moon-orb.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/purple-crystal.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/hourglass.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/lantern.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/violet-berries.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/spellbook.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/blue-potion.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/white-feather.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/golden-parcel.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/wildflower.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/wooden-chest.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/relics/dream-diary.png,prototype-extracted,production-sheet right relic panel,68x76,
+assets/events/moonlight-encounter.png,prototype-extracted,overview-sheet small narrative tiles,66x51,
+assets/events/forest-portal.png,prototype-extracted,overview-sheet small narrative tiles,70x51,
+assets/events/post-office-midnight.png,prototype-extracted,overview-sheet small narrative tiles,75x51,
+assets/events/rabbit-festival.png,prototype-extracted,overview-sheet small narrative tiles,67x32,
+assets/events/surprise-visitor.png,prototype-extracted,overview-sheet small narrative tiles,68x32,
+assets/events/starlit-letter.png,prototype-extracted,overview-sheet small narrative tiles,72x32,
+assets/events/location-moonfield.png,reference-derived,route scene duplicate for story illustration,159x154,
+assets/events/location-cloudpath.png,reference-derived,route scene duplicate for story illustration,169x154,
+assets/events/location-forest-of-whispers.png,reference-derived,route scene duplicate for story illustration,170x154,
+assets/events/location-starport.png,reference-derived,route scene duplicate for story illustration,180x154,
+assets/ui/primary-button.svg,vector-ready,authored SVG from approved color art direction,320x180,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/secondary-button.svg,vector-ready,authored SVG from approved color art direction,320x180,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/parchment-panel.svg,vector-ready,authored SVG from approved color art direction,640x440,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/postcard-frame.svg,vector-ready,authored SVG from approved color art direction,640x430,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/message-input.svg,vector-ready,authored SVG from approved color art direction,640x420,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/tab-active.svg,vector-ready,authored SVG from approved color art direction,320x128,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/tab-inactive.svg,vector-ready,authored SVG from approved color art direction,320x128,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/toast.svg,vector-ready,authored SVG from approved color art direction,640x160,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/navbar-background.svg,vector-ready,authored SVG from approved color art direction,255x760,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/collection-slot.svg,vector-ready,authored SVG from approved color art direction,192x200,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/progress-track.svg,vector-ready,authored SVG from approved color art direction,620x90,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/mail-seal.svg,vector-ready,authored SVG from approved color art direction,128x128,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/star-rating.svg,vector-ready,authored SVG from approved color art direction,128x128,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/moon-mark.svg,vector-ready,authored SVG from approved color art direction,132x132,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/envelope.svg,vector-ready,authored SVG from approved color art direction,248x200,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/popup-panel.svg,vector-ready,authored SVG from approved color art direction,640x526,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/card-background.svg,vector-ready,authored SVG from approved color art direction,440x310,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/reward-pill.svg,vector-ready,authored SVG from approved color art direction,260x88,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/ui/divider.svg,vector-ready,authored SVG from approved color art direction,454x58,"Dynamic text/UI should be composed in HTML, not baked into sprites"
+assets/props/cabinet.png,cutout-needs-qa,post-office separate prop thumbnail,40x49,
+assets/props/hanging-lamp.png,cutout-needs-qa,post-office separate prop thumbnail,25x42,
+assets/props/pink-flowers.png,cutout-needs-qa,post-office separate prop thumbnail,32x43,
+assets/props/parcel.png,cutout-needs-qa,post-office separate prop thumbnail,33x31,
+assets/props/letter-box.png,cutout-needs-qa,post-office separate prop thumbnail,41x29,
+assets/props/window.png,cutout-needs-qa,post-office separate prop thumbnail,41x51,
+assets/props/wooden-table.png,cutout-needs-qa,post-office separate prop thumbnail,102x39,
+assets/props/stool.png,cutout-needs-qa,post-office separate prop thumbnail,32x33,
+assets/props/wooden-crate.png,cutout-needs-qa,post-office separate prop thumbnail,42x38,
+assets/props/mail-crate.png,cutout-needs-qa,post-office separate prop thumbnail,42x39,
+assets/effects/sparkles.png,prototype-extracted,generated effects thumbnails,49x35,
+assets/effects/moonburst.png,prototype-extracted,generated effects thumbnails,44x35,
+assets/effects/stardust.png,prototype-extracted,generated effects thumbnails,43x34,
+assets/effects/portal.png,prototype-extracted,generated effects thumbnails,45x35,
+assets/effects/cloud-fluff.png,prototype-extracted,generated effects thumbnails,52x50,
+assets/effects/magic-swirl.png,prototype-extracted,generated effects thumbnails,46x51,
+assets/effects/petals.png,prototype-extracted,generated effects thumbnails,47x49,
+assets/effects/star-glow.png,prototype-extracted,generated effects thumbnails,50x51,
+assets/audio/prototype/send.wav,synthetic-prototype-sfx,procedurally generated sine tone,,Replace with polished sound design before production
+assets/audio/prototype/arrival.wav,synthetic-prototype-sfx,procedurally generated sine tone,,Replace with polished sound design before production
+assets/audio/prototype/stamp.wav,synthetic-prototype-sfx,procedurally generated sine tone,,Replace with polished sound design before production
+assets/audio/prototype/sparkle.wav,synthetic-prototype-sfx,procedurally generated sine tone,,Replace with polished sound design before production
+assets/audio/prototype/error.wav,synthetic-prototype-sfx,procedurally generated sine tone,,Replace with polished sound design before production
+assets/postcards/moonfield-sample.png,demo-composite,composed postcard example,1200x750,Text should be rendered dynamically for user-generated story
+assets/postcards/cloudpath-sample.png,demo-composite,composed postcard example,1200x750,Text should be rendered dynamically for user-generated story
+assets/postcards/forest-of-whispers-sample.png,demo-composite,composed postcard example,1200x750,Text should be rendered dynamically for user-generated story
+assets/postcards/starport-sample.png,demo-composite,composed postcard example,1200x750,Text should be rendered dynamically for user-generated story
+assets/environments/post-office-exterior/scene-wide-alt.png,prototype-extracted,"Generated marketing/world sheet, wide alternate composition; not true high-resolution master",237x118,
+assets/environments/post-office-exterior/scene-wide-preview.webp,prototype-upscaled,Upscaled alternative for 2:1 layout previews only,1280x640,
+assets/environments/post-office-interior/scene-wide-alt.png,prototype-extracted,"Generated marketing/world sheet, wide alternate composition; not true high-resolution master",240x118,
+assets/environments/post-office-interior/scene-wide-preview.webp,prototype-upscaled,Upscaled alternative for 2:1 layout previews only,1280x640,
+assets/environments/cloudpath/scene-wide-alt.png,prototype-extracted,"Generated marketing/world sheet, wide alternate composition; not true high-resolution master",256x118,
+assets/environments/cloudpath/scene-wide-preview.webp,prototype-upscaled,Upscaled alternative for 2:1 layout previews only,1280x640,
+assets/environments/moonfield/scene-wide-alt.png,prototype-extracted,"Generated marketing/world sheet, wide alternate composition; not true high-resolution master",237x120,
+assets/environments/moonfield/scene-wide-preview.webp,prototype-upscaled,Upscaled alternative for 2:1 layout previews only,1280x640,
+assets/environments/forest-of-whispers/scene-wide-alt.png,prototype-extracted,"Generated marketing/world sheet, wide alternate composition; not true high-resolution master",239x120,
+assets/environments/forest-of-whispers/scene-wide-preview.webp,prototype-upscaled,Upscaled alternative for 2:1 layout previews only,1280x640,
+assets/environments/starport/scene-wide-alt.png,prototype-extracted,"Generated marketing/world sheet, wide alternate composition; not true high-resolution master",255x120,
+assets/environments/starport/scene-wide-preview.webp,prototype-upscaled,Upscaled alternative for 2:1 layout previews only,1280x640,
+assets/marketing/main-keyart.png,prototype-extracted,"Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",761x316,
+assets/marketing/app-icon-art.png,prototype-extracted,"Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",82x75,
+assets/marketing/steam-capsule-concept.png,prototype-extracted,"Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",233x75,
+assets/marketing/social-preview-concept.png,prototype-extracted,"Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",192x77,
+assets/marketing/vertical-environment-1.png,prototype-extracted,"Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",59x77,
+assets/marketing/vertical-environment-2.png,prototype-extracted,"Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",62x77,
+assets/marketing/loading-logo-composite.png,prototype-extracted,"Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",139x134,
+assets/branding/hero-keyart-wide.png,reference-derived,"Illustration with baked-in branding, use as promotional composition only",761x316,
+assets/events/banners/moon-festival.png,prototype-extracted,Contains static text from concept; replace with dynamic localized copy for shipping,213x32,
+assets/events/banners/endless-rain.png,prototype-extracted,Contains static text from concept; replace with dynamic localized copy for shipping,213x29,
+assets/events/banners/nightmare-invasion.png,prototype-extracted,Contains static text from concept; replace with dynamic localized copy for shipping,213x32,
+assets/events/banners/starfall-season.png,prototype-extracted,Contains static text from concept; replace with dynamic localized copy for shipping,213x57,
+assets/concept-extras/terrain-tiles-concept.png,reference-derived,"Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",257x181,
+assets/concept-extras/environment-props-concept.png,reference-derived,"Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",253x181,
+assets/concept-extras/spell-effects-concept.png,reference-derived,"Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",235x183,
+assets/concept-extras/npc-character-poses-concept.png,reference-derived,"Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",271x188,
+assets/concept-extras/npc-and-postmaster-portraits.png,reference-derived,"Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",269x188,
+assets/concept-extras/event-illustrations-concept.png,reference-derived,"Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",422x195,
+assets/concept-extras/postcard-collection-concept.png,reference-derived,"Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",314x185,

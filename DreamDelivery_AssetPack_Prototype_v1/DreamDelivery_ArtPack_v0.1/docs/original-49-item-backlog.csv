@@ -1,0 +1,50 @@
+id,group,name,target_path,priority,format,technical_spec,reference_region,notes,status
+ENV-001,environment,Post Office interior background,assets/environments/post-office/interior-background.webp,P0,WebP,2560x1440 master; mobile-safe center composition,07,No UI labels or text baked into background,not_created_exact_spec
+ENV-002,environment,Post Office foreground overlays,assets/environments/post-office/interior-foreground.png,P0,PNG transparent,Separate plants/lamps/desk front; original framing aligned to ENV-001,07,Allow limited parallax and sprites passing behind props,not_created_exact_spec
+ENV-003,environment,Moonfield far background,assets/environments/moonfield/far.webp,P0,WebP,"2560x1440 master, seamless scene perspective","04,09",First playable route,not_created_exact_spec
+ENV-004,environment,Moonfield middle scenery,assets/environments/moonfield/middle.png,P0,PNG transparent,2560x1440 canvas aligned to ENV-003,"04,09","Moon island landmarks, bridge, silhouettes",not_created_exact_spec
+ENV-005,environment,Moonfield foreground objects,assets/environments/moonfield/foreground.png,P0,PNG transparent,2560x1440 canvas aligned to ENV-003,"04,09",Lights/foliage close to viewer,not_created_exact_spec
+CHR-001,courier,Momo canonical turnaround,assets/couriers/momo/character-sheet.png,P0,PNG,"Front, side, back reference + palette; clean consistent proportions",02,"Character sheet, not runtime sprite",not_created_exact_spec
+CHR-002,courier,Momo portrait,assets/couriers/momo/portrait.png,P0,PNG transparent,512x512 master; face and messenger outfit,"02,07",Use on selection cards and profile,created
+CHR-003,courier,Momo idle sprite sheet,assets/couriers/momo/idle.png,P0,PNG transparent,"4-6 frames, 64x64 logical cell, nearest-neighbor, manifest","02,09",Consistent anchor and baseline,not_created_exact_spec
+CHR-004,courier,Momo walk sprite sheet,assets/couriers/momo/walk.png,P0,PNG transparent,"6-8 frames, 64x64 logical cell, nearest-neighbor, manifest","05,09",Walk cycle clear at small sizes,not_created_exact_spec
+CHR-005,courier,Momo encounter sprite sheet,assets/couriers/momo/react.png,P0,PNG transparent,"4-6 frames, 64x64 cell, manifest","05,09","Surprise reaction, no change of design",not_created_exact_spec
+CHR-006,courier,Momo animation metadata,assets/couriers/momo/animations.json,P0,JSON,frame size/fps/anchor/hitbox/animation names,"02,05",Coordinate with sprite sheets,created
+UI-001,ui,Dream Delivery logo,assets/branding/dream-delivery-logo.svg,P0,SVG,"Vector recreation 1-2 lockups, readable at small widths","01,06",Do not merely crop tiny raster logo,not_created_exact_spec
+UI-002,ui,Parchment surface texture,assets/ui/surfaces/parchment.webp,P0,WebP,"Tileable subtle texture 512x512, low contrast","08,10",Text rendered as HTML,not_created_exact_spec
+UI-003,ui,Storybook panel frame,assets/ui/frames/panel-frame.9.png,P0,9-slice PNG,"9-slice frame, 48px safe corners","07,08,10",Stretch center without distorting corners,not_created_exact_spec
+UI-004,ui,Message editor ornament,assets/ui/frames/letter-border.9.png,P0,9-slice PNG,Borders only; editable text must remain live,08,Do not bake letter text,not_created_exact_spec
+UI-005,ui,Moonfield route thumbnail,assets/ui/route-cards/moonfield.webp,P0,WebP,"600x400, 3:2 crop","04,08",Coherent with ENV-003-005,not_created_exact_spec
+UI-006,ui,Courier selection card,assets/ui/cards/courier-selection.9.png,P0,9-slice PNG,"Cards support active, hover and focus states",08,Portrait overlaid separately,not_created_exact_spec
+UI-007,ui,Tracker HUD frame,assets/ui/frames/tracker-panel.9.png,P0,9-slice PNG,Dark navy translucent style; accessible contrast,09,Event text must be live,not_created_exact_spec
+UI-008,ui,Journey line icons,assets/ui/icons/journey-icons.svg,P0,SVG,"Navigation, letter, crescent, encounter, location","08,09",Custom family or consistently styled icon system,not_created_exact_spec
+UI-009,ui,Story report postcard frame,assets/ui/frames/postcard-frame.png,P0,PNG transparent,"1600x1000, text and image empty slots",10,Social export 1200x750 from composed layers,not_created_exact_spec
+UI-010,ui,Send button ornaments,assets/ui/buttons/button-ornaments.svg,P0,SVG,Stars/sparkles only; real HTML button required,08,Hover effects handled by UI,not_created_exact_spec
+FX-001,vfx,Moonfield glow particles,assets/vfx/moon-particles.png,P0,PNG transparent,"8-12 small particle shapes, sprite atlas",09,Optimized limited particle counts,not_created_exact_spec
+FX-002,vfx,Magical envelope,assets/vfx/flying-envelope.png,P0,PNG transparent,Small animated object or 4-frame atlas,"05,09",Courier delivers this envelope,not_created_exact_spec
+COL-001,collectible,Starter stamp set,assets/collectibles/stamps/starter-stamps.png,P0,PNG transparent,"6 stamps, each 256x256 with uniform padding","10,12",No tiny unreadable text in pixels,not_created_exact_spec
+ENV-006,environment,Landing hero art,assets/environments/landing/hero.webp,P1,WebP,2560x1440 master with headline safe zone,"01,06","Visual match to reference, no baked typography",not_created_exact_spec
+ENV-007,environment,Post Office exterior,assets/environments/post-office/exterior.webp,P1,WebP,"2560x1440 master, warm lantern lighting","01,10","Used for splash, postcard and onboarding",not_created_exact_spec
+ENV-008,environment,Cloudpath illustration and layers,assets/environments/cloudpath/,P1,WebP+PNG,Far/mid/foreground aligned 2560x1440,04,Cloud/island sky path,created
+ENV-009,environment,Forest of Whispers illustration and layers,assets/environments/whispering-forest/,P1,WebP+PNG,Far/mid/foreground aligned 2560x1440,04,Magic teal forest,not_created_exact_spec
+ENV-010,environment,Starport illustration and layers,assets/environments/starport/,P1,WebP+PNG,Far/mid/foreground aligned 2560x1440,04,Bustling night sky-harbor,created
+CHR-007,courier,Lune canonical turnaround,assets/couriers/lune/character-sheet.png,P1,PNG,"Front, side, back, personality palette",02,Moon rabbit,not_created_exact_spec
+CHR-008,courier,Lune portrait,assets/couriers/lune/portrait.png,P1,PNG transparent,512x512,02,Same pixel density as Momo,created
+CHR-009,courier,Lune runtime animations,assets/couriers/lune/,P1,PNG+JSON,idle/walk/react sheet; 64x64 logical cell,"02,05",Each action distinct asset plus animation metadata,created
+CHR-010,courier,Pip canonical turnaround,assets/couriers/pip/character-sheet.png,P1,PNG,"Front, side, back, personality palette",02,Sleepy bird,not_created_exact_spec
+CHR-011,courier,Pip portrait,assets/couriers/pip/portrait.png,P1,PNG transparent,512x512,02,Same pixel density as Momo,created
+CHR-012,courier,Pip runtime animations,assets/couriers/pip/,P1,PNG+JSON,idle/fly/sleep/react; 64x64 logical cell,"02,05",Custom flight movement loop,created
+UI-011,ui,Inbox letter icons and state variants,assets/ui/inbox/,P1,SVG+PNG,Unread/read/received/archived,11,HTML handles accessibility,not_created_exact_spec
+UI-012,ui,Journal card backs and slots,assets/ui/journal/,P1,PNG+SVG,Card and item slots; flexible nine slice,12,Shared panel frame where possible,not_created_exact_spec
+UI-013,ui,Friend row avatar ring,assets/ui/friends/avatar-ring.svg,P1,SVG,Adaptable sizes 40/56/80,13,Only decorative part,not_created_exact_spec
+UI-014,ui,Store display card ornaments,assets/ui/shop/store-frame.9.png,P1,9-slice PNG,"Supports dynamic title, price, preview",14,No checkout built into image,not_created_exact_spec
+UI-015,ui,Responsive navigation ornaments,assets/ui/navigation/,P1,SVG,Desktop sidebar and mobile bottom nav variants,"06,07,08",Use real accessible navigation,not_created_exact_spec
+COL-002,collectible,Relic icon mini-set,assets/collectibles/relics/,P1,PNG transparent,"8 icons, 256x256","10,12",Use reference blue-gold-lilac coloring,not_created_exact_spec
+COL-003,collectible,Shop skin previews,assets/collectibles/skins/,P1,PNG transparent,"3 initial previews, 512x512",14,Preview only until monetization,not_created_exact_spec
+AUD-001,audio,Post Office ambience,assets/audio/post-office-loop.ogg,P1,OGG,30-60s seamless loop,07,"Optional sound, mute by default",not_created_exact_spec
+AUD-002,audio,Magic letter send SFX,assets/audio/send-letter.ogg,P1,OGG,Short sound <2s,08,Use licensed/original audio,not_created_exact_spec
+AUD-003,audio,Encounter chime SFX,assets/audio/encounter.ogg,P1,OGG,Short sound <2s,09,Use licensed/original audio,not_created_exact_spec
+MKT-001,marketing,Steam capsule art,assets/marketing/steam-capsule/,P2,PNG/JPEG,Create at current Steam-required dimensions when publishing,15,Art and logos without tiny UI screenshot,not_created_exact_spec
+MKT-002,marketing,App store screenshots,assets/marketing/mobile/,P2,PNG,Portrait/device captures generated from real app,15,Produce once mobile is ready,not_created_exact_spec
+ENV-011,environment,Additional seasonal biomes,assets/environments/seasonal/,P2,WebP+PNG,Scene sets as required,04,Only after initial retention validation,not_created_exact_spec
+COL-004,collectible,Premium cosmetic sets,assets/collectibles/premium/,P2,PNG+JSON,Separate cosmetics and inventory definitions,14,No pay-to-win,not_created_exact_spec

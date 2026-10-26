@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "project": "Dream Delivery",
+  "couriers": [
+    {
+      "id": "momo",
+      "name": "Momo",
+      "title": "The Curious Cat",
+      "portrait": "/assets/couriers/momo/portrait.png",
+      "animations": "/assets/couriers/momo/animations.json",
+      "accentColor": "#E5AA65"
+    },
+    {
+      "id": "lune",
+      "name": "Lune",
+      "title": "The Moon Rabbit",
+      "portrait": "/assets/couriers/lune/portrait.png",
+      "animations": "/assets/couriers/lune/animations.json",
+      "accentColor": "#EAA9D3"
+    },
+    {
+      "id": "pip",
+      "name": "Pip",
+      "title": "The Sleepy Bird",
+      "portrait": "/assets/couriers/pip/portrait.png",
+      "animations": "/assets/couriers/pip/animations.json",
+      "accentColor": "#7DB8DF"
+    }
+  ],
+  "routes": [
+    {
+      "id": "post-office-exterior",
+      "label": "Post Office Exterior",
+      "scene": "/assets/environments/post-office-exterior/scene-native.png",
+      "preview": "/assets/environments/post-office-exterior/scene-preview.webp",
+      "resolutionNote": "upsampled from 1536x1024 composite sheet; needs high-res production re-render"
+    },
+    {
+      "id": "post-office-interior",
+      "label": "Post Office Interior",
+      "scene": "/assets/environments/post-office-interior/scene-native.png",
+      "preview": "/assets/environments/post-office-interior/scene-preview.webp",
+      "resolutionNote": "upsampled from 1536x1024 composite sheet; needs high-res production re-render"
+    },
+    {
+      "id": "cloudpath",
+      "label": "Cloudpath",
+      "scene": "/assets/environments/cloudpath/scene-native.png",
+      "preview": "/assets/environments/cloudpath/scene-preview.webp",
+      "resolutionNote": "upsampled from 1536x1024 composite sheet; needs high-res production re-render"
+    },
+    {
+      "id": "moonfield",
+      "label": "Moonfield",
+      "scene": "/assets/environments/moonfield/scene-native.png",
+      "preview": "/assets/environments/moonfield/scene-preview.webp",
+      "resolutionNote": "upsampled from 1536x1024 composite sheet; needs high-res production re-render"
+    },
+    {
+      "id": "forest-of-whispers",
+      "label": "Forest Of Whispers",
+      "scene": "/assets/environments/forest-of-whispers/scene-native.png",
+      "preview": "/assets/environments/forest-of-whispers/scene-preview.webp",
+      "resolutionNote": "upsampled from 1536x1024 composite sheet; needs high-res production re-render"
+    },
+    {
+      "id": "starport",
+      "label": "Starport",
+      "scene": "/assets/environments/starport/scene-native.png",
+      "preview": "/assets/environments/starport/scene-preview.webp",
+      "resolutionNote": "upsampled from 1536x1024 composite sheet; needs high-res production re-render"
+    }
+  ],
+  "recommendedFirstVerticalSlice": {
+    "courier": "momo",
+    "route": "moonfield"
+  },
+  "pixelArt": {
+    "logicalFrameSize": [
+      64,
+      64
+    ],
+    "scaleMode": "nearest",
+    "defaultFps": 6
+  },
+  "designTokens": {
+    "navy": "#20284B",
+    "midnight": "#141D38",
+    "lavender": "#6864B5",
+    "lilac": "#A7A2D2",
+    "cream": "#F5E8D5",
+    "paper": "#FFF5E8",
+    "peach": "#E9AB91",
+    "gold": "#EFC477",
+    "ink": "#303451",
+    "border": "#D7B79D"
+  },
+  "uiAssetRoot": "/assets/ui"
+}

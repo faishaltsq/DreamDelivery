@@ -1,0 +1,2327 @@
+[
+  {
+    "path": "assets/branding/logo-illustrated-raster.png",
+    "status": "reference-derived",
+    "source": "production-sheet branding 10,30\u2013263,175",
+    "dimensions": [
+      253,
+      145
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/branding/logo-and-palette-sheet.png",
+    "status": "reference-derived",
+    "source": "overview sheet left",
+    "dimensions": [
+      271,
+      312
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/branding/hero-art-crop.png",
+    "status": "reference-derived",
+    "source": "overview hero",
+    "dimensions": [
+      597,
+      308
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/post-office-exterior/scene-native.png",
+    "status": "reference-derived",
+    "source": "production-sheet visual crop",
+    "dimensions": [
+      417,
+      284
+    ],
+    "notes": "Native resolution from composite; do not claim high-resolution standalone illustration"
+  },
+  {
+    "path": "assets/environments/post-office-exterior/scene-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled production-sheet crop",
+    "dimensions": [
+      1600,
+      900
+    ],
+    "notes": "Preview-sized upscale only, not HD source"
+  },
+  {
+    "path": "assets/environments/post-office-interior/scene-native.png",
+    "status": "reference-derived",
+    "source": "production-sheet visual crop",
+    "dimensions": [
+      368,
+      204
+    ],
+    "notes": "Native resolution from composite; do not claim high-resolution standalone illustration"
+  },
+  {
+    "path": "assets/environments/post-office-interior/scene-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled production-sheet crop",
+    "dimensions": [
+      1600,
+      900
+    ],
+    "notes": "Preview-sized upscale only, not HD source"
+  },
+  {
+    "path": "assets/environments/cloudpath/scene-native.png",
+    "status": "reference-derived",
+    "source": "production-sheet visual crop",
+    "dimensions": [
+      169,
+      154
+    ],
+    "notes": "Native resolution from composite; do not claim high-resolution standalone illustration"
+  },
+  {
+    "path": "assets/environments/cloudpath/scene-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled production-sheet crop",
+    "dimensions": [
+      1600,
+      900
+    ],
+    "notes": "Preview-sized upscale only, not HD source"
+  },
+  {
+    "path": "assets/environments/moonfield/scene-native.png",
+    "status": "reference-derived",
+    "source": "production-sheet visual crop",
+    "dimensions": [
+      159,
+      154
+    ],
+    "notes": "Native resolution from composite; do not claim high-resolution standalone illustration"
+  },
+  {
+    "path": "assets/environments/moonfield/scene-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled production-sheet crop",
+    "dimensions": [
+      1600,
+      900
+    ],
+    "notes": "Preview-sized upscale only, not HD source"
+  },
+  {
+    "path": "assets/environments/forest-of-whispers/scene-native.png",
+    "status": "reference-derived",
+    "source": "production-sheet visual crop",
+    "dimensions": [
+      170,
+      154
+    ],
+    "notes": "Native resolution from composite; do not claim high-resolution standalone illustration"
+  },
+  {
+    "path": "assets/environments/forest-of-whispers/scene-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled production-sheet crop",
+    "dimensions": [
+      1600,
+      900
+    ],
+    "notes": "Preview-sized upscale only, not HD source"
+  },
+  {
+    "path": "assets/environments/starport/scene-native.png",
+    "status": "reference-derived",
+    "source": "production-sheet visual crop",
+    "dimensions": [
+      180,
+      154
+    ],
+    "notes": "Native resolution from composite; do not claim high-resolution standalone illustration"
+  },
+  {
+    "path": "assets/environments/starport/scene-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled production-sheet crop",
+    "dimensions": [
+      1600,
+      900
+    ],
+    "notes": "Preview-sized upscale only, not HD source"
+  },
+  {
+    "path": "assets/environments/cloudpath/concept-band-1.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      168,
+      44
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/cloudpath/concept-band-2.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      168,
+      34
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/cloudpath/concept-band-3.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      168,
+      29
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/moonfield/concept-band-1.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      159,
+      45
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/moonfield/concept-band-2.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      159,
+      34
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/moonfield/concept-band-3.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      159,
+      28
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/forest-of-whispers/concept-band-1.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      168,
+      45
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/forest-of-whispers/concept-band-2.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      168,
+      34
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/forest-of-whispers/concept-band-3.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      168,
+      28
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/starport/concept-band-1.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      177,
+      46
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/starport/concept-band-2.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      177,
+      33
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/starport/concept-band-3.png",
+    "status": "reference-derived",
+    "source": "Production sheet illustrated layer references",
+    "dimensions": [
+      177,
+      28
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/couriers/momo/portrait-native.png",
+    "status": "reference-derived",
+    "source": "production-sheet left portrait",
+    "dimensions": [
+      78,
+      95
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/couriers/momo/portrait.png",
+    "status": "cutout-needs-qa",
+    "source": "portrait cutout enlarged x4",
+    "dimensions": [
+      384,
+      384
+    ],
+    "notes": "Check antialiased cream fringing; source resolution limited"
+  },
+  {
+    "path": "assets/couriers/momo/poses/idle.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (125,389)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/walk.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (166,389)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/run.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (207,389)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/jump.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (248,389)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/fly.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (289,389)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/sleep.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (330,389)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/idle-alt.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (125,437)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/walk-alt.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (166,437)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/run-alt.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (207,437)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/special.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (248,437)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/reaction.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (289,437)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses/rest.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (330,437)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/momo/poses-atlas.png",
+    "status": "prototype-extracted",
+    "source": "composited pose previews",
+    "dimensions": [
+      384,
+      128
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/couriers/momo/animations/idle.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/momo/animations/walk.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/momo/animations/fly.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/momo/animations/reaction.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/lune/portrait-native.png",
+    "status": "reference-derived",
+    "source": "production-sheet left portrait",
+    "dimensions": [
+      78,
+      95
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/couriers/lune/portrait.png",
+    "status": "cutout-needs-qa",
+    "source": "portrait cutout enlarged x4",
+    "dimensions": [
+      384,
+      384
+    ],
+    "notes": "Check antialiased cream fringing; source resolution limited"
+  },
+  {
+    "path": "assets/couriers/lune/poses/idle.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (125,522)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/walk.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (166,522)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/run.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (207,522)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/jump.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (248,522)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/fly.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (289,522)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/sleep.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (330,522)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/idle-alt.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (125,568)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/walk-alt.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (166,568)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/run-alt.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (207,568)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/special.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (248,568)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/reaction.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (289,568)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses/rest.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (330,568)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/lune/poses-atlas.png",
+    "status": "prototype-extracted",
+    "source": "composited pose previews",
+    "dimensions": [
+      384,
+      128
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/couriers/lune/animations/idle.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/lune/animations/walk.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/lune/animations/fly.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/lune/animations/reaction.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/pip/portrait-native.png",
+    "status": "reference-derived",
+    "source": "production-sheet left portrait",
+    "dimensions": [
+      81,
+      94
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/couriers/pip/portrait.png",
+    "status": "cutout-needs-qa",
+    "source": "portrait cutout enlarged x4",
+    "dimensions": [
+      384,
+      384
+    ],
+    "notes": "Check antialiased cream fringing; source resolution limited"
+  },
+  {
+    "path": "assets/couriers/pip/poses/idle.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (125,643)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/walk.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (166,643)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/run.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (207,643)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/jump.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (248,643)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/fly.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (289,643)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/sleep.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (330,643)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/idle-alt.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (125,692)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/walk-alt.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (166,692)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/run-alt.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (207,692)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/special.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (248,692)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/reaction.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (289,692)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses/rest.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet sprite center (330,692)",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": "Pose reference; NOT a professionally frame-registered animation"
+  },
+  {
+    "path": "assets/couriers/pip/poses-atlas.png",
+    "status": "prototype-extracted",
+    "source": "composited pose previews",
+    "dimensions": [
+      384,
+      128
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/couriers/pip/animations/idle.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/pip/animations/walk.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/pip/animations/fly.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/couriers/pip/animations/reaction.png",
+    "status": "placeholder-animation",
+    "source": "procedural atlas from concept pose cuts",
+    "dimensions": [
+      256,
+      64
+    ],
+    "notes": "Frames re-use concept poses; requires animator QA"
+  },
+  {
+    "path": "assets/mail/letter-paper.png",
+    "status": "reference-derived",
+    "source": "source: stationery panel",
+    "dimensions": [
+      75,
+      97
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/mail/wax-envelope.png",
+    "status": "reference-derived",
+    "source": "source: stationery panel",
+    "dimensions": [
+      78,
+      74
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/mail/postcard-moon.png",
+    "status": "reference-derived",
+    "source": "source: stationery panel",
+    "dimensions": [
+      63,
+      78
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/mail/postcard-cloud.png",
+    "status": "reference-derived",
+    "source": "source: stationery panel",
+    "dimensions": [
+      107,
+      86
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/mail/letter-stationery.png",
+    "status": "reference-derived",
+    "source": "source: stationery panel",
+    "dimensions": [
+      86,
+      68
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/mail/wax-stamp.png",
+    "status": "reference-derived",
+    "source": "source: stationery panel",
+    "dimensions": [
+      54,
+      48
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/sun-stamp.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/moon-stamp.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/lilac-flower.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/sun-coin.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/blue-flower.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/gold-coin.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/journal.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/gold-leaf.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/dream-crystal.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/wax-seal.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/little-star.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/sparkle.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/leaf.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/pink-flower.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/mailbox.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/clover.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/potion.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/red-flower.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/green-leaf.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/feather.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/wagon.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/key.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/flower-bundle.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/wooden-coin.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/map-scroll.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/chest.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/blue-coin.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/silver-coin.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/pinwheel.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/cherry-blossom.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/brown-relic.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/crown.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/mail-package.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/green-crystal.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/ice-crystal.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/icons/items/night-seal.png",
+    "status": "prototype-extracted",
+    "source": "cropped item icon from production sheet",
+    "dimensions": [
+      64,
+      64
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/stamps/moonrise.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet collectible stamps",
+    "dimensions": [
+      50,
+      67
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/stamps/castle.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet collectible stamps",
+    "dimensions": [
+      50,
+      67
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/stamps/dream-forest.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet collectible stamps",
+    "dimensions": [
+      50,
+      67
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/stamps/windmill.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet collectible stamps",
+    "dimensions": [
+      50,
+      67
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/stamps/portal-forest.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet collectible stamps",
+    "dimensions": [
+      50,
+      67
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/stamps/twilight-port.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet collectible stamps",
+    "dimensions": [
+      50,
+      67
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/stamps/crescent.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet collectible stamps",
+    "dimensions": [
+      50,
+      67
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/stamps/floating-city.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet collectible stamps",
+    "dimensions": [
+      50,
+      67
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/stamps/starry-night.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet collectible stamps",
+    "dimensions": [
+      50,
+      67
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/moon-orb.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/purple-crystal.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/hourglass.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/lantern.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/violet-berries.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/spellbook.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/blue-potion.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/white-feather.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/golden-parcel.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/wildflower.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/wooden-chest.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/relics/dream-diary.png",
+    "status": "prototype-extracted",
+    "source": "production-sheet right relic panel",
+    "dimensions": [
+      68,
+      76
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/moonlight-encounter.png",
+    "status": "prototype-extracted",
+    "source": "overview-sheet small narrative tiles",
+    "dimensions": [
+      66,
+      51
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/forest-portal.png",
+    "status": "prototype-extracted",
+    "source": "overview-sheet small narrative tiles",
+    "dimensions": [
+      70,
+      51
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/post-office-midnight.png",
+    "status": "prototype-extracted",
+    "source": "overview-sheet small narrative tiles",
+    "dimensions": [
+      75,
+      51
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/rabbit-festival.png",
+    "status": "prototype-extracted",
+    "source": "overview-sheet small narrative tiles",
+    "dimensions": [
+      67,
+      32
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/surprise-visitor.png",
+    "status": "prototype-extracted",
+    "source": "overview-sheet small narrative tiles",
+    "dimensions": [
+      68,
+      32
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/starlit-letter.png",
+    "status": "prototype-extracted",
+    "source": "overview-sheet small narrative tiles",
+    "dimensions": [
+      72,
+      32
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/location-moonfield.png",
+    "status": "reference-derived",
+    "source": "route scene duplicate for story illustration",
+    "dimensions": [
+      159,
+      154
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/location-cloudpath.png",
+    "status": "reference-derived",
+    "source": "route scene duplicate for story illustration",
+    "dimensions": [
+      169,
+      154
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/location-forest-of-whispers.png",
+    "status": "reference-derived",
+    "source": "route scene duplicate for story illustration",
+    "dimensions": [
+      170,
+      154
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/location-starport.png",
+    "status": "reference-derived",
+    "source": "route scene duplicate for story illustration",
+    "dimensions": [
+      180,
+      154
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/ui/primary-button.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      320,
+      180
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/secondary-button.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      320,
+      180
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/parchment-panel.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      640,
+      440
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/postcard-frame.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      640,
+      430
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/message-input.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      640,
+      420
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/tab-active.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      320,
+      128
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/tab-inactive.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      320,
+      128
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/toast.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      640,
+      160
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/navbar-background.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      255,
+      760
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/collection-slot.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      192,
+      200
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/progress-track.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      620,
+      90
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/mail-seal.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      128,
+      128
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/star-rating.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      128,
+      128
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/moon-mark.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      132,
+      132
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/envelope.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      248,
+      200
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/popup-panel.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      640,
+      526
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/card-background.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      440,
+      310
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/reward-pill.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      260,
+      88
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/ui/divider.svg",
+    "status": "vector-ready",
+    "source": "authored SVG from approved color art direction",
+    "dimensions": [
+      454,
+      58
+    ],
+    "notes": "Dynamic text/UI should be composed in HTML, not baked into sprites"
+  },
+  {
+    "path": "assets/props/cabinet.png",
+    "status": "cutout-needs-qa",
+    "source": "post-office separate prop thumbnail",
+    "dimensions": [
+      40,
+      49
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/props/hanging-lamp.png",
+    "status": "cutout-needs-qa",
+    "source": "post-office separate prop thumbnail",
+    "dimensions": [
+      25,
+      42
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/props/pink-flowers.png",
+    "status": "cutout-needs-qa",
+    "source": "post-office separate prop thumbnail",
+    "dimensions": [
+      32,
+      43
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/props/parcel.png",
+    "status": "cutout-needs-qa",
+    "source": "post-office separate prop thumbnail",
+    "dimensions": [
+      33,
+      31
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/props/letter-box.png",
+    "status": "cutout-needs-qa",
+    "source": "post-office separate prop thumbnail",
+    "dimensions": [
+      41,
+      29
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/props/window.png",
+    "status": "cutout-needs-qa",
+    "source": "post-office separate prop thumbnail",
+    "dimensions": [
+      41,
+      51
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/props/wooden-table.png",
+    "status": "cutout-needs-qa",
+    "source": "post-office separate prop thumbnail",
+    "dimensions": [
+      102,
+      39
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/props/stool.png",
+    "status": "cutout-needs-qa",
+    "source": "post-office separate prop thumbnail",
+    "dimensions": [
+      32,
+      33
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/props/wooden-crate.png",
+    "status": "cutout-needs-qa",
+    "source": "post-office separate prop thumbnail",
+    "dimensions": [
+      42,
+      38
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/props/mail-crate.png",
+    "status": "cutout-needs-qa",
+    "source": "post-office separate prop thumbnail",
+    "dimensions": [
+      42,
+      39
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/effects/sparkles.png",
+    "status": "prototype-extracted",
+    "source": "generated effects thumbnails",
+    "dimensions": [
+      49,
+      35
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/effects/moonburst.png",
+    "status": "prototype-extracted",
+    "source": "generated effects thumbnails",
+    "dimensions": [
+      44,
+      35
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/effects/stardust.png",
+    "status": "prototype-extracted",
+    "source": "generated effects thumbnails",
+    "dimensions": [
+      43,
+      34
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/effects/portal.png",
+    "status": "prototype-extracted",
+    "source": "generated effects thumbnails",
+    "dimensions": [
+      45,
+      35
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/effects/cloud-fluff.png",
+    "status": "prototype-extracted",
+    "source": "generated effects thumbnails",
+    "dimensions": [
+      52,
+      50
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/effects/magic-swirl.png",
+    "status": "prototype-extracted",
+    "source": "generated effects thumbnails",
+    "dimensions": [
+      46,
+      51
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/effects/petals.png",
+    "status": "prototype-extracted",
+    "source": "generated effects thumbnails",
+    "dimensions": [
+      47,
+      49
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/effects/star-glow.png",
+    "status": "prototype-extracted",
+    "source": "generated effects thumbnails",
+    "dimensions": [
+      50,
+      51
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/audio/prototype/send.wav",
+    "status": "synthetic-prototype-sfx",
+    "source": "procedurally generated sine tone",
+    "dimensions": [],
+    "notes": "Replace with polished sound design before production"
+  },
+  {
+    "path": "assets/audio/prototype/arrival.wav",
+    "status": "synthetic-prototype-sfx",
+    "source": "procedurally generated sine tone",
+    "dimensions": [],
+    "notes": "Replace with polished sound design before production"
+  },
+  {
+    "path": "assets/audio/prototype/stamp.wav",
+    "status": "synthetic-prototype-sfx",
+    "source": "procedurally generated sine tone",
+    "dimensions": [],
+    "notes": "Replace with polished sound design before production"
+  },
+  {
+    "path": "assets/audio/prototype/sparkle.wav",
+    "status": "synthetic-prototype-sfx",
+    "source": "procedurally generated sine tone",
+    "dimensions": [],
+    "notes": "Replace with polished sound design before production"
+  },
+  {
+    "path": "assets/audio/prototype/error.wav",
+    "status": "synthetic-prototype-sfx",
+    "source": "procedurally generated sine tone",
+    "dimensions": [],
+    "notes": "Replace with polished sound design before production"
+  },
+  {
+    "path": "assets/postcards/moonfield-sample.png",
+    "status": "demo-composite",
+    "source": "composed postcard example",
+    "dimensions": [
+      1200,
+      750
+    ],
+    "notes": "Text should be rendered dynamically for user-generated story"
+  },
+  {
+    "path": "assets/postcards/cloudpath-sample.png",
+    "status": "demo-composite",
+    "source": "composed postcard example",
+    "dimensions": [
+      1200,
+      750
+    ],
+    "notes": "Text should be rendered dynamically for user-generated story"
+  },
+  {
+    "path": "assets/postcards/forest-of-whispers-sample.png",
+    "status": "demo-composite",
+    "source": "composed postcard example",
+    "dimensions": [
+      1200,
+      750
+    ],
+    "notes": "Text should be rendered dynamically for user-generated story"
+  },
+  {
+    "path": "assets/postcards/starport-sample.png",
+    "status": "demo-composite",
+    "source": "composed postcard example",
+    "dimensions": [
+      1200,
+      750
+    ],
+    "notes": "Text should be rendered dynamically for user-generated story"
+  },
+  {
+    "path": "assets/environments/post-office-exterior/scene-wide-alt.png",
+    "status": "prototype-extracted",
+    "source": "Generated marketing/world sheet, wide alternate composition; not true high-resolution master",
+    "dimensions": [
+      237,
+      118
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/post-office-exterior/scene-wide-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled alternative for 2:1 layout previews only",
+    "dimensions": [
+      1280,
+      640
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/post-office-interior/scene-wide-alt.png",
+    "status": "prototype-extracted",
+    "source": "Generated marketing/world sheet, wide alternate composition; not true high-resolution master",
+    "dimensions": [
+      240,
+      118
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/post-office-interior/scene-wide-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled alternative for 2:1 layout previews only",
+    "dimensions": [
+      1280,
+      640
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/cloudpath/scene-wide-alt.png",
+    "status": "prototype-extracted",
+    "source": "Generated marketing/world sheet, wide alternate composition; not true high-resolution master",
+    "dimensions": [
+      256,
+      118
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/cloudpath/scene-wide-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled alternative for 2:1 layout previews only",
+    "dimensions": [
+      1280,
+      640
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/moonfield/scene-wide-alt.png",
+    "status": "prototype-extracted",
+    "source": "Generated marketing/world sheet, wide alternate composition; not true high-resolution master",
+    "dimensions": [
+      237,
+      120
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/moonfield/scene-wide-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled alternative for 2:1 layout previews only",
+    "dimensions": [
+      1280,
+      640
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/forest-of-whispers/scene-wide-alt.png",
+    "status": "prototype-extracted",
+    "source": "Generated marketing/world sheet, wide alternate composition; not true high-resolution master",
+    "dimensions": [
+      239,
+      120
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/forest-of-whispers/scene-wide-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled alternative for 2:1 layout previews only",
+    "dimensions": [
+      1280,
+      640
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/starport/scene-wide-alt.png",
+    "status": "prototype-extracted",
+    "source": "Generated marketing/world sheet, wide alternate composition; not true high-resolution master",
+    "dimensions": [
+      255,
+      120
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/environments/starport/scene-wide-preview.webp",
+    "status": "prototype-upscaled",
+    "source": "Upscaled alternative for 2:1 layout previews only",
+    "dimensions": [
+      1280,
+      640
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/marketing/main-keyart.png",
+    "status": "prototype-extracted",
+    "source": "Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",
+    "dimensions": [
+      761,
+      316
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/marketing/app-icon-art.png",
+    "status": "prototype-extracted",
+    "source": "Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",
+    "dimensions": [
+      82,
+      75
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/marketing/steam-capsule-concept.png",
+    "status": "prototype-extracted",
+    "source": "Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",
+    "dimensions": [
+      233,
+      75
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/marketing/social-preview-concept.png",
+    "status": "prototype-extracted",
+    "source": "Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",
+    "dimensions": [
+      192,
+      77
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/marketing/vertical-environment-1.png",
+    "status": "prototype-extracted",
+    "source": "Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",
+    "dimensions": [
+      59,
+      77
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/marketing/vertical-environment-2.png",
+    "status": "prototype-extracted",
+    "source": "Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",
+    "dimensions": [
+      62,
+      77
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/marketing/loading-logo-composite.png",
+    "status": "prototype-extracted",
+    "source": "Store previews are reference-quality concept crops, NOT final required Steam/App Store sizes",
+    "dimensions": [
+      139,
+      134
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/branding/hero-keyart-wide.png",
+    "status": "reference-derived",
+    "source": "Illustration with baked-in branding, use as promotional composition only",
+    "dimensions": [
+      761,
+      316
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/banners/moon-festival.png",
+    "status": "prototype-extracted",
+    "source": "Contains static text from concept; replace with dynamic localized copy for shipping",
+    "dimensions": [
+      213,
+      32
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/banners/endless-rain.png",
+    "status": "prototype-extracted",
+    "source": "Contains static text from concept; replace with dynamic localized copy for shipping",
+    "dimensions": [
+      213,
+      29
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/banners/nightmare-invasion.png",
+    "status": "prototype-extracted",
+    "source": "Contains static text from concept; replace with dynamic localized copy for shipping",
+    "dimensions": [
+      213,
+      32
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/events/banners/starfall-season.png",
+    "status": "prototype-extracted",
+    "source": "Contains static text from concept; replace with dynamic localized copy for shipping",
+    "dimensions": [
+      213,
+      57
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/concept-extras/terrain-tiles-concept.png",
+    "status": "reference-derived",
+    "source": "Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",
+    "dimensions": [
+      257,
+      181
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/concept-extras/environment-props-concept.png",
+    "status": "reference-derived",
+    "source": "Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",
+    "dimensions": [
+      253,
+      181
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/concept-extras/spell-effects-concept.png",
+    "status": "reference-derived",
+    "source": "Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",
+    "dimensions": [
+      235,
+      183
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/concept-extras/npc-character-poses-concept.png",
+    "status": "reference-derived",
+    "source": "Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",
+    "dimensions": [
+      271,
+      188
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/concept-extras/npc-and-postmaster-portraits.png",
+    "status": "reference-derived",
+    "source": "Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",
+    "dimensions": [
+      269,
+      188
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/concept-extras/event-illustrations-concept.png",
+    "status": "reference-derived",
+    "source": "Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",
+    "dimensions": [
+      422,
+      195
+    ],
+    "notes": ""
+  },
+  {
+    "path": "assets/concept-extras/postcard-collection-concept.png",
+    "status": "reference-derived",
+    "source": "Contact sheet only. Requires precise slicing, alignment and verification before used as runtime tiles or frames",
+    "dimensions": [
+      314,
+      185
+    ],
+    "notes": ""
+  }
+]

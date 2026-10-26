@@ -1,0 +1,5 @@
+node_modules/
+shots/
+smoke2.log
+.DS_Store
+Thumbs.db
