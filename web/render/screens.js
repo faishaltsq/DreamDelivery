@@ -1,5 +1,6 @@
 // Dream Delivery render layer: read-only projection of game state to DOM. No game rules here.
 import { COURIERS, ROUTES, ENCOUNTERS, STAMPS, BONUS_STAMPS, allStampIds } from '../game/state.js';
+import { applyAssets, applyScene } from './assets.js';
 
 const SCREENS = ['post-office', 'write', 'choose', 'route-map', 'journey', 'encounter', 'postcard', 'album'];
 
@@ -29,11 +30,12 @@ export function renderChoose(state) {
   const grid = $('courier-grid');
   const hadFocus = document.activeElement?.dataset?.courier ?? null;
   grid.replaceChildren(...Object.values(COURIERS).map(c => courierCard(c, state.courierId === c.id)));
+  void applyAssets(grid);
   $('btn-confirm-courier').disabled = !state.courierId;
   // Keep focus on the selected card (arrow-key selection re-renders the group);
   // fall back to the selected card, else first card, so the group always has exactly one tab stop.
-  const target = (hadFocus && grid.querySelector(`[data-courier=${hadFocus}]`))
-    || grid.querySelector('[aria-checked="true"]')
+  const target = grid.querySelector('[aria-checked="true"]')
+    || (hadFocus && grid.querySelector(`[data-courier=${hadFocus}]`))
     || grid.querySelector('[data-courier]');
   if (target) {
     for (const c of grid.querySelectorAll('[data-courier]')) c.tabIndex = c === target ? 0 : -1;
@@ -50,9 +52,9 @@ function courierCard(c, selected) {
   btn.setAttribute('aria-checked', String(selected));
   btn.tabIndex = selected ? 0 : -1;
   btn.innerHTML = `
-    <img class="frame" src="/assets/ui/card-background.svg" alt="" aria-hidden="true">
-    <img class="face" src="/assets/couriers/${c.id}/portrait.png" alt="Portrait of ${c.name}">
-    <span class="name" style="color:${c.accent}">${c.name}</span>
+    <img class="frame" data-asset="ui.card" src="/assets/ui/card-background.svg" alt="" aria-hidden="true">
+    <img class="face" data-asset="courier.${c.id}.portrait" src="/assets/couriers/${c.id}/portrait.png" alt="Portrait of ${c.name}">
+    <span class="name">${c.name}</span>
     <span class="role">${c.title}</span>`;
   return btn;
 }
@@ -71,8 +73,8 @@ function routeCard(r) {
   btn.className = 'route-card';
   btn.dataset.route = r.id;
   btn.innerHTML = `
-    <img class="frame" src="/assets/ui/card-background.svg" alt="" aria-hidden="true">
-    <img class="tile pixel-art" src="${r.tile}" alt="" aria-hidden="true">
+    <img class="frame" data-asset="ui.card" src="/assets/ui/card-background.svg" alt="" aria-hidden="true">
+    <img class="tile" src="${r.tile}" alt="" aria-hidden="true">
     <span class="name">${r.label}</span>`;
   return btn;
 }
@@ -80,11 +82,21 @@ function routeCard(r) {
 export function renderJourney(state) {
   const route = ROUTES[state.journey?.routeId];
   if (!route) return;
-  $('journey-bg').src = route.scene;
+  const background = $('journey-bg');
+  if (background.dataset.environment !== route.id) {
+    background.dataset.environment = route.id;
+    void applyScene(background, route.id);
+  }
   $('journey-title').textContent = `${route.label} Journey`;
-  const pct = Math.round((state.journey?.progress ?? 0) * 100);
-  $('journey-bar').style.width = `${pct}%`;
-  $('journey-progress').setAttribute('aria-valuenow', String(pct));
+  const progress = Math.max(0, Math.min(1, state.journey.progress));
+  $('journey-bar').style.width = `${progress * 100}%`;
+  $('journey-progress').setAttribute('aria-valuenow', String(Math.round(progress * 100)));
+  const stage = $('courier-stage');
+  const scene = stage.closest('.scene');
+  const position = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0.5 : 0.14 + progress * 0.72;
+  stage.style.left = `${Math.round(scene.clientWidth * position)}px`;
+  stage.style.top = `${Math.round(scene.clientHeight * 0.68)}px`;
+  stage.dataset.progress = String(progress);
   $('journey-hint').textContent = `${COURIERS[state.courierId ?? 'momo'].name} travels the ${route.label.toLowerCase()}…`;
 }
 
@@ -94,8 +106,10 @@ export function renderEncounter(state) {
   $('encounter-title').textContent = enc.title;
   $('encounter-text').textContent = enc.text;
   $('encounter-effect').src = enc.effectAsset;
-  $('encounter-bg').src = ROUTES[state.journey.routeId].scene;
-  $('encounter-courier').src = `/assets/couriers/${state.courierId ?? 'momo'}/poses/idle.png`;
+  $('encounter-bg').dataset.environment = state.journey.routeId;
+  void applyScene($('encounter-bg'), state.journey.routeId);
+  $('encounter-courier').dataset.asset = `courier.${state.courierId ?? 'momo'}.portrait`;
+  $('encounter-courier').src = `/assets/couriers/${state.courierId ?? 'momo'}/portrait.png`;
 }
 
 export function renderPostcard(state) {
@@ -115,12 +129,11 @@ export function renderAlbum(state) {
     const slot = document.createElement('div');
     slot.className = 'album-slot' + (owned.has(id) ? ' owned' : '');
     slot.innerHTML = `
-      <img class="frame" src="/assets/ui/collection-slot.svg" alt="" aria-hidden="true">
+      <img class="frame" data-asset="ui.slot" src="/assets/ui/collection-slot.svg" alt="" aria-hidden="true">
       ${owned.has(id) ? `<img class="stamp pixel-art" src="${STAMPS[id] ?? BONUS_STAMPS[id]}" alt="Stamp ${id}">`
                       : `<span class="unknown">?</span>`}`;
     return slot;
   }));
-  const routeCounts = Object.values(ROUTES).map(r => `${r.label}${owned.has(r.stamp) ? ' ✓' : ''}`);
   $('album-count').textContent = `${owned.size} of ${allStampIds().length} stamps`;
   $('album-history').textContent = state.letters.length
     ? `${state.letters.length} letter${state.letters.length > 1 ? 's' : ''} delivered. Latest: ${state.letters.at(-1).recipient}, via ${ROUTES[state.letters.at(-1).routeId].label}.`

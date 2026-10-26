@@ -1,0 +1,6 @@
+/* Dream Delivery Art Refresh v2 */
+:root{--dd-midnight:#141D38;--dd-navy:#20284B;--dd-lavender:#6864B5;--dd-cream:#F5E8D5;--dd-paper:#FFF5E8;--dd-peach:#E9AB91;--dd-gold:#EFC477;--dd-border:#CE936A;--dd-ink:#293357;--dd-ui-radius:20px;}
+.dd-illustration{image-rendering:auto;object-fit:cover;}
+.dd-pixel-sprite{image-rendering:pixelated;image-rendering:crisp-edges;}
+.dd-action{min-height:44px;min-width:44px;touch-action:manipulation;}
+@media(prefers-reduced-motion:reduce){.dd-moving{animation:none!important;transition:none!important;}}

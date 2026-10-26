@@ -2,7 +2,6 @@
 
 Cozy delivery game prototype: a midnight dream post office, three pixel-art couriers, four dream routes. Built as a static web app from the DreamDelivery Art Pack v0.1 prototype assets.
 
-![status](https://img.shields.io/badge/status-vertical--slice-orange)
 
 ## Play
 
@@ -47,8 +46,22 @@ Full inventory: `DreamDelivery_AssetPack_Prototype_v1/DreamDelivery_ArtPack_v0.1
 
 ## Accessibility
 
-Keyboard-only playable (WAI-ARIA radiogroup with arrow keys, visible gold focus ring), WCAG AA-checked pairings, ≥44px touch targets, `prefers-reduced-motion` support, responsive from 390px up.
+Native keyboard controls, a roving courier radio group, visible focus, at least 44px touch targets, safe-area-aware layouts, and reduced-motion handling. Checked text pairs meet AA; a comprehensive accessibility audit is not claimed.
 
 ## Development
 
-`web/dev/server.cjs` is a throwaway static server for local play only. `web/BUILD-NOTES.md` documents verification evidence and known gaps.
+`web/dev/server.cjs` serves local play. `web/BUILD-NOTES.md` records tests and limitations.
+
+```sh
+node --test tests/state.test.js tests/assets.test.js tests/sprites.test.js tests/refresh.test.js
+node tests/reconstruction.cjs
+node tests/reconstruction.cjs --v2
+```
+
+The screenshot runner launches an isolated Chrome profile. Set `CHROME_PATH` if Chrome is not at its default Windows path. It captures every screen at 390, 768, 1440 and 1920 widths into `qa/reconstruction/`, including `comparison.html` alongside the master concept.
+
+## Art Refresh Pack v2
+
+The supplied v2 pack is a preview draft, not native-HD production artwork. Its checksummed assets are available at `http://127.0.0.1:8642/?art=v2`; v1 stays default. [Refresh delivery and rollback](docs/ART-REFRESH-V2.md), [registry contracts](docs/ASSET-INTEGRATION.md), and [side-by-side screenshots](qa/art-comparison.html).
+
+Actual screenshot findings, defects fixed and production art limitations: [visual QA](docs/VISUAL-QA.md).

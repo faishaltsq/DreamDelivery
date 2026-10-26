@@ -1,95 +1,63 @@
-# Dream Delivery — Build & Verification Notes
+# Dream Delivery build and verification
 
-Two increments shipped:
-1. Vertical slice: Post Office → Write Letter → Choose Momo → Moonfield Journey → Encounter → Story Postcard.
-2. Expansion: 4 routes (Cloudpath, Forest of Whispers, Moonfield, Starport), all 3 couriers with per-courier walk atlases, per-route encounters + stamps, localStorage persistence, stamp album (9 slots), prototype SFX toggle.
-3. Stability & gameplay foundation audit: journey timing rewrite, listener lifecycle, keyboard accessibility, asset-loading resilience, hybrid art rendering, committed regression suites.
+## Local play
 
-## Run
-
-```
-cd web
-node dev/server.cjs
-# open http://127.0.0.1:8642/
+```sh
+node web/dev/server.cjs
+# http://127.0.0.1:8642/
 ```
 
-## Reproduce the test suites
+Node 22+ for the browser runner's native WebSocket; verification used Node 26.4. No product dependencies or framework migration.
 
-```
-# Logic (no browser needed):
-node --test tests/state.test.js
+## Reproducible checks
 
-# Browser (two terminals):
-node web/dev/server.cjs                                                        # waits for READY
-"C:/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --disable-gpu --remote-debugging-port=9333 about:blank
-node --test tests/browser.test.cjs                                             # needs BOTH services up
-
-# Visual QA capture (same two services up):
-node tests/visual-qa.cjs        # writes shots/vqa/*.png at 390/768/1440
+```sh
+node --test tests/state.test.js tests/assets.test.js tests/sprites.test.js tests/refresh.test.js
+node tests/reconstruction.cjs
+node tests/reconstruction.cjs --v2
 ```
 
-## Audit fixes (this increment)
+The reconstruction runner launches its own isolated Chrome profile on CDP port 9444, starts the local server only if needed, and closes only its own processes. `CHROME_PATH` selects a different Chrome executable. The existing local server remains running. Do not point another driver at this owned test page.
 
-### P0-1 Journey timing
-- Root cause: the rAF tick dispatched **cumulative elapsed time** as `dt` while `ADVANCE_JOURNEY` treated it as per-frame; progress accelerated quadratically (measured: encounter at ~2s wall on an 8s route; bar 15% → 94% in one 800ms window).
-- Fix: `web/game/journeyClock.js` — pure accumulator with per-frame clamp (`MAX_FRAME_STEP = 1s`); completion is a single `justCompleted` edge; main.js dispatches one final `ADVANCE_JOURNEY(route.duration)` on that edge only.
-- Tab suspension: hidden-tab deltas clamp to 1s/frame, so progress is honest and completion lands on the timeline; `pagehide` cancels the pending rAF; stale-frame guard drops ticks after leaving the journey screen.
-- Reduced motion: state timeline unchanged (stamps/letters identical); only the sprite loop freezes on frame 0 and the visible trot anim finishes immediately.
-- Synchronization: progress bar renders from the same `clock.progress` that drives completion; the CSS trot duration is set inline to the route duration.
+Outputs: `qa/reconstruction/` contains 32 PNGs, `results.json`, and `comparison.html`, including the approved master concept alongside screenshots. Screens cover all eight states at 390×844, 768×1024, 1440×900 and 1920×1080. The runner checks visible controls for overlap, clipping, minimum hit area, horizontal overflow, broken images and painting rendering mode. Normal journeys use real time. Repeated-delivery tests explicitly simulate rAF time to exercise ten transaction cycles faster; those simulated cycles are not duration measurements.
 
-### P0-2 Listener lifecycle
-- `bindContinue()` is idempotent (boolean guard, unbound after each use). Verified by 10 consecutive deliveries (`ten consecutive deliveries` test) plus double-click assertions per delivery; letters exactly 10, stamps exactly 4 distinct. State machine additionally rejects double `FINISH_DELIVERY` (`_delivered` flag set on first fire, cleared on `BEGIN_JOURNEY`).
+Legacy integration suite remains available with its explicit prerequisites:
 
-### P0-3 Keyboard accessibility
-- Roving tabindex: exactly one tabbable card at all times (`renderChoose` restores/assigns it across re-renders; first card tabbable when nothing selected).
-- ArrowLeft/Right/Up/Down + Home + End, wrapping; selection follows focus; visible focus ring (gold `--dd-focus-ring`).
-- Verified keyboard-only: seal → arrows/Home/End → Enter → route Enter → journey starts.
-
-### P0-4 Asset-loading resilience
-- `animations.json` fetch: HTTP failure/malformed JSON falls back to pack-contract metadata (64×64, 4-frame walk @7fps) with a `console.warn`; journey stays playable. Tested with a 500-intercepted fetch (browser test) + injected failures (logic tests).
-- Sprite `<img>` error: canvas hidden, labeled status chip replaces it (`Waking <name>…` / `<name> travels unseen`); no unrelated art substituted; timeline completes.
-- Mid-fetch navigation: `startJourney` aborts cleanly (no rAF leak).
-
-### P1 Hybrid art rendering
-- Removed `pixelated` from hand-painted environment scenes and the painted postcard photo and cutout portraits; kept nearest-neighbor on true pixel-art: courier canvas, wax stamps, route tiles, collectible stamps, effects.
-- Palette audit vs `master-original.png` (16-step token buckets, ±30 tol): cream/midnight/navy/ink prevalence tracks the master within a few points on all three breakpoints; parchment panel + midnight palette untouched.
-
-## Before/after timing (measured)
-
-| Route | Config | Before (broken dt) | After (60fps sim) | After (browser CDP) |
-|---|---|---|---|---|
-| cloudpath | 8s | encounter ~2.0s | 8.017s | 8.7s incl. poll interval |
-| forest-of-whispers | 10s | ~2.5s | 10.017s | 10.8s |
-| moonfield | 12s | ~3s | 12.017s | 12.8s |
-| starport | 14s | ~3.5s | 14.017s | 14.8s |
-
-CDP numbers include the 250-300ms poll interval; tolerance in tests is ±2.5s. Logic-sim numbers are deterministic.
-
-## Test results (actual, this working tree)
-
-```
-node --test tests/state.test.js   → tests 21, pass 21, fail 0
-node --test tests/browser.test.cjs → tests 8, pass 8, fail 0
+```sh
+node web/dev/server.cjs
+# separate terminal; use a dedicated profile:
+"C:/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --disable-gpu --remote-debugging-port=9333 --user-data-dir=C:/Temp/dd-browser-tests about:blank
+node --test tests/browser.test.cjs
 ```
 
-Coverage: valid/invalid transitions, all four route chains, journey timing (deterministic + suspension + clamp), repeat deliveries (10x), stamp collection + dedup, malformed/valid persistence recovery, metadata failure fallback, keyboard flow, no-page-errors assertion (suite fails if any console error fires).
+## Reconstruction changes
+
+- Continue is registered once. Claim and finish run against a local next-state value, then commit once before one stamp/arrival SFX pair. Repeated clicks outside Encounter are no-ops. Removed accumulating `bindContinue` closures.
+- One JourneyClock advances the state every frame. Courier coordinates and progress fill read that same state. Removed independent CSS trot, reset position at every journey, rounded coordinates and sprite scale to integer pixels. Atlas anchor is normalized from the selected manifest.
+- Successful sprite loading removes the status label, not just its class. Late responses cannot resurrect abandoned journeys. Invalid dimensions, malformed metadata, HTTP errors and timeouts retain documented fallbacks or a visible text status; delivery never waits for art.
+- Roving radio focus survives re-render; one tabbable option exists initially. Screen changes focus the heading or first meaningful control.
+- All eight screens use content-sized parchment, existing SVG nine-slice decoration, compact native controls, safe-area padding and short-screen scrolling. Long player text wraps without escaping its postcard. Painted backgrounds use smooth scaling; courier pixels use nearest-neighbor.
+- The centralized registry binds assets without game-rule changes. The newly supplied v2 preview draft is available only with `?art=v2`; v1 remains default. Checksummed supplied files are not relabeled native-HD. See `docs/ART-REFRESH-V2.md` and `docs/ASSET-INTEGRATION.md`.
+
+## Executed evidence
+
+- Deterministic suite: 44 passed, 0 failed (state/clock, assets, sprite lifecycle and actual refresh manifest/rollback).
+- Legacy browser suite: 8 passed, 0 failed. Reconstruction runner: 32 screenshots each for v1 and v2; zero detected layout findings; clock/bar/courier sync, label removal, ten deliveries, SFX dedup, keyboard and unavailable metadata+atlas under reduced motion.
+- Contrast checker: muted ink `#565a73` on parchment `#f8ebd8`: 5.75:1; white on candidate button's corrected worst checked hover stop `#6b67a7`: 5.09:1. The first candidate check failed at 4.43:1 and was fixed. This is not a comprehensive WCAG audit.
+
+## Actual failures found while developing
+
+1. Stretching a decorative SVG IMG preserved its viewBox aspect internally, leaving a tiny skin beneath taller content. Replaced panel/button/card surfaces with nine-slice border images using the supplied SVGs.
+2. A decorative pseudo-element extended outside button bounds, causing horizontal scroll-area findings. Its border now sits inside the control.
+3. Focus restoration chose the formerly focused radio over the newly selected radio, leaving the wrong Tab stop. Selection now has priority.
+4. The first legacy-browser invocation failed because its documented port 9333 prerequisite was absent. The new reconstruction runner is self-contained; the legacy suite was restarted with a dedicated Chrome instance.
 
 ## Known limitations
 
-- 5 bonus stamps (castle, windmill, portal-forest, twilight-port, floating-city) render as `?`; no earn conditions yet.
-- SFX are `synthetic-prototype-sfx` placeholders (off by default).
-- Environments are low-res `reference-derived` crops; production needs high-res re-renders (see pack inventory statuses). `scene-wide-alt.png` used on album backdrop only.
-- Postcard photos reuse the pack's 4 demo composites; per-route painted finals pending.
-- Visual identity was verified programmatically (palette/token presence) because this build session has no image vision; human review of `shots/vqa/` + `shots/vqa-compare-1440.png` still recommended.
-- Browser suite assumes Chrome headless on 9333 and the static server on 8642; it flakes if two drivers share the same CDP page (observed and documented: run suites exclusively).
-
-## Production gaps (unchanged from pack inventory)
-
-| Asset used | Status | Production replacement needed |
-|---|---|---|
-| environments/*/scene-native.png | reference-derived crops | High-res illustrations with parallax |
-| couriers/*/animations/* | placeholder-animation | Hand-registered frames |
-| couriers/*/portrait.png | cutout-needs-qa | Clean high-res portraits |
-| postcards/*-sample.png | demo-composite | Print-res compositions |
-| audio/prototype/*.wav | synthetic tones | Licensed soundscape |
-| stamps/* | prototype-extracted | Consistent stamp passes |
+- Native-HD art remains pending. The delivered v2 pack labels its 2560×1440 exports as upscaled integration previews and Momo as reused poses. V1 remains default; `?art=v2` enables draft artwork for comparison.
+- Pip's existing portrait includes a visible blue extraction fragment above the head. No unapproved repaint or crop was used to hide it.
+- Courier walking frames reuse prototype poses; locomotion is correctly timed but not production animation. Some painted routes lack a continuous ground plane, so the horizontal courier path appears airborne.
+- Sample postcard images already contain their own painted border and small baked text; a second illustrated frame remains visible. Production postcard art should be supplied without UI copy/frame if full separation is required.
+- Environment focal points/layers can be configured, but no independent production parallax art is present. No fake layers are generated.
+- Five bonus stamp slots remain unearnable, unchanged. Prototype audio is off by default. No backend, payments, random encounters or multiplayer were added.
+- Screenshot comparisons document composition and defects; palette or geometry checks do not certify master-reference fidelity. Final art approval remains pending independent native-HD assets.

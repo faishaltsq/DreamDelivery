@@ -157,7 +157,7 @@ export function dispatch(state, action) {
 
     case 'FINISH_DELIVERY':
       if (state.screen !== 'encounter') return state;
-      // journey is cleared on transition; a stale second click cannot re-apply
+      // A completed delivery cannot append a second history entry.
       if (state._delivered) return state;
       return { ...state,
         screen: 'postcard',

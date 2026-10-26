@@ -1,0 +1,47 @@
+{
+  "id": "momo",
+  "name": "Momo",
+  "quality": "PROTOTYPE_SOURCE_REUSED_ALIGNED_NOT_HAND_ANIMATED",
+  "portrait": "portrait.png",
+  "sprite": "sprite.png",
+  "animations": {
+    "idle": {
+      "file": "animations/idle.png",
+      "frames": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "fps": 3,
+      "quality": "POSE_REUSE_NOT_FINAL"
+    },
+    "walk": {
+      "file": "animations/walk.png",
+      "frames": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "fps": 7,
+      "quality": "POSE_REUSE_NOT_FINAL"
+    },
+    "reaction": {
+      "file": "animations/reaction.png",
+      "frames": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "fps": 5,
+      "quality": "POSE_REUSE_NOT_FINAL"
+    },
+    "sleep": {
+      "file": "animations/sleep.png",
+      "frames": 4,
+      "frameWidth": 64,
+      "frameHeight": 64,
+      "fps": 2,
+      "quality": "POSE_REUSE_NOT_FINAL"
+    }
+  },
+  "recommendedAnchor": {
+    "x": 0.5,
+    "y": 0.85
+  },
+  "pixelRendering": "nearest",
+  "sourceNote": "Derived from original prototype artwork, not new full fidelity hand drawn animation."
+}

@@ -1,63 +1,76 @@
-// Sprite atlas animator. Reads animations.json metadata {frames, fps, frameWidth, frameHeight}.
-// Quality note: atlases are placeholder-animation; this driver stays frame-count agnostic so
-// re-registered professional atlases drop in without code changes.
 export class SpriteAnimator {
-  constructor({ src, frames, fps = 6, frameWidth = 64, frameHeight = 64, onReady, onError }) {
-    this.src = src; this.frames = frames; this.fps = fps;
-    this.frameWidth = frameWidth; this.frameHeight = frameHeight;
-    this.frame = 0; this.accumulator = 0; this.lastT = null; this.running = false;
-    this.onReady = onReady; this.onError = onError; this.failed = false;
+  constructor({ src, frames, fps = 6, frameWidth = 64, frameHeight = 64, anchor = { x: 0.5, y: 0.85 }, onReady, onError }) {
+    Object.assign(this, { frames, fps, frameWidth, frameHeight, anchor, onReady, onError });
     this.el = document.createElement('canvas');
-    this.el.width = frameWidth; this.el.height = frameHeight;
+    this.el.width = frameWidth;
+    this.el.height = frameHeight;
     this.el.className = 'pixel-art';
     this.ctx = this.el.getContext('2d');
+    this.ctx.imageSmoothingEnabled = false;
     this.image = new Image();
-    // P0-4: sprite failure degrades to the caller's fallback UI; it never locks the flow.
-    this.image.addEventListener('error', () => {
-      this.failed = true;
-      this.onError?.();
-    });
-    this.image.addEventListener('load', () => this.onReady?.());
+    this.frame = 0;
+    this.elapsed = 0;
+    this.running = false;
+    this.destroyed = false;
+    this.loaded = false;
+    this.failed = false;
+    this.timer = setTimeout(() => this.fail(), 5000);
+    this.image.onload = () => {
+      if (this.destroyed || this.failed) return;
+      if (this.image.naturalWidth !== frames * frameWidth || this.image.naturalHeight !== frameHeight) return this.fail();
+      clearTimeout(this.timer);
+      this.loaded = true;
+      this.draw();
+      this.onReady?.();
+    };
+    this.image.onerror = () => this.fail();
     this.image.decoding = 'async';
     this.image.src = src;
   }
-
+  fail() {
+    if (this.destroyed || this.failed) return;
+    clearTimeout(this.timer);
+    this.failed = true;
+    this.stop();
+    this.onError?.();
+  }
   mount(container) {
-    if (!this.failed) container.append(this.el);
+    container.append(this.el);
+    const scale = Math.max(1, Math.min(3, Math.floor(container.closest('.scene').clientWidth / 450) + 1));
+    this.el.style.width = `${this.frameWidth * scale}px`;
+    this.el.style.height = `${this.frameHeight * scale}px`;
+    container.style.marginLeft = `${-Math.round(this.frameWidth * scale * this.anchor.x)}px`;
+    container.style.marginTop = `${-Math.round(this.frameHeight * scale * this.anchor.y)}px`;
     this.start();
     return this;
   }
-
-  start() {
-    if (this.running) return;
-    this.running = true;
-    this.lastT = null;
-    requestAnimationFrame(this._tick);
+  draw() {
+    if (!this.loaded || this.destroyed) return;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const frame = reduced ? 0 : this.frame;
+    this.ctx.clearRect(0, 0, this.frameWidth, this.frameHeight);
+    this.ctx.drawImage(this.image, frame * this.frameWidth, 0, this.frameWidth, this.frameHeight, 0, 0, this.frameWidth, this.frameHeight);
   }
-
-  stop() { this.running = false; }
-
-  destroy() { this.stop(); this.el.remove(); }
-
-  _tick = (t) => {
-    if (!this.running) return;
-    if (this.lastT == null) this.lastT = t;
-    const dt = Math.min(0.5, (t - this.lastT) / 1000); // clamp tab-suspension jumps
-    this.lastT = t;
-    if (this.image.complete && this.image.naturalWidth > 0) {
-      this.accumulator += dt;
-      const frameDur = 1 / this.fps;
-      while (this.accumulator >= frameDur) {
-        this.accumulator -= frameDur;
-        this.frame = (this.frame + 1) % this.frames;
-      }
-      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const drawFrame = reduced ? 0 : this.frame;
-      this.ctx.clearRect(0, 0, this.frameWidth, this.frameHeight);
-      this.ctx.drawImage(this.image,
-        drawFrame * this.frameWidth, 0, this.frameWidth, this.frameHeight,
-        0, 0, this.frameWidth, this.frameHeight);
-    }
-    requestAnimationFrame(this._tick);
-  };
+  start() {
+    if (this.running || this.destroyed) return;
+    this.running = true;
+    this.last = null;
+    const tick = now => {
+      if (!this.running) return;
+      if (this.last !== null) this.elapsed += Math.min(0.5, (now - this.last) / 1000);
+      this.last = now;
+      this.frame = Math.floor(this.elapsed * this.fps) % this.frames;
+      this.draw();
+      this.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+  }
+  stop() { this.running = false; cancelAnimationFrame(this.raf); }
+  destroy() {
+    this.destroyed = true;
+    this.stop();
+    clearTimeout(this.timer);
+    this.image.onload = this.image.onerror = null;
+    this.el.remove();
+  }
 }

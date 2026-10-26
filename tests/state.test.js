@@ -30,12 +30,10 @@ const simulate = (s, routeId, { fps = 60, suspensionAfter = null, suspensionFor 
     if (suspensionAfter != null && wall >= suspensionAfter && wall - frame < suspensionAfter) {
       dt = frame + suspensionFor; // tab woke up after being hidden
     }
-    const { justCompleted } = clock.advance(dt);
-    if (justCompleted) s = dispatch(s, { type: 'ADVANCE_JOURNEY', dt: clock.elapsed });
-    else if (justCompleted === false && clock.progress >= 1) s = dispatch(s, { type: 'ADVANCE_JOURNEY', dt: clock.elapsed });
-    else if (Math.abs(clock.elapsed - s.journey.progress * route.duration) > route.duration) {
-      s = dispatch(s, { type: 'ADVANCE_JOURNEY', dt: clock.elapsed });
-    }
+    const { advanced, justCompleted } = clock.advance(dt);
+    const remaining = route.duration * (1 - s.journey.progress);
+    s = dispatch(s, { type: 'ADVANCE_JOURNEY', dt: justCompleted ? remaining : advanced });
+    assert.ok(Math.abs(s.journey.progress - clock.progress) < 1e-10);
   }
   assert.ok(clock.completed, `${routeId}: clock must complete`);
   return { s, clock, wall, guard };
@@ -173,7 +171,7 @@ describe('journey timing (P0-1): deterministic clock', () => {
     assert.equal(clock.progress, 1);
   });
 
-  test('extend() API is not present: clock is advance-only (double completion impossible)', () => {
+  test('completed clock ignores further elapsed time', () => {
     const clock = createJourneyClock(1);
     clock.advance(2); // huge delta clamps to 1s: completes
     assert.equal(clock.completed, true);
@@ -188,7 +186,8 @@ describe('journey timing (P0-1): deterministic clock', () => {
       const { s: sEnd, clock } = simulate(s, routeId, { suspensionAfter: route.duration / 3, suspensionFor: 60 });
       assert.equal(clock.completed, true, routeId);
       assert.equal(clock.progress, 1);
-      assert.ok(clock.elapsed >= route.duration - 1/60 && clock.elapsed <= route.duration + MAXD(1), routeId);
+      assert.equal(clock.elapsed, route.duration);
+      assert.equal(sEnd.screen, 'encounter');
     }
   });
 
@@ -201,8 +200,6 @@ describe('journey timing (P0-1): deterministic clock', () => {
   });
 });
 
-// helper used above; defined after use in ESM hoisting order is illegal, so define wrap
-function MAXD(n) { return n; }
 
 describe('journey through dispatch: duplicate ADVANCE after completion cannot create a second encounter', () => {
   test('post-completion ADVANCE_JOURNEY keeps screen=encounter and progress=1', () => {
@@ -210,7 +207,6 @@ describe('journey through dispatch: duplicate ADVANCE after completion cannot cr
     s = dispatch(s, { type: 'BEGIN_JOURNEY', routeId: 'cloudpath' });
     s = dispatch(s, { type: 'ADVANCE_JOURNEY', dt: ROUTES.cloudpath.duration });
     assert.equal(s.screen, 'encounter');
-    const progressBefore = s.journey.progress;
     s = dispatch(s, { type: 'ADVANCE_JOURNEY', dt: 100 });
     assert.equal(s.screen, 'encounter');
     assert.equal(s.journey.progress, 1);

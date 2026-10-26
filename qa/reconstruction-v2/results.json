@@ -1,0 +1,211 @@
+{
+  "screenshots": [
+    "390-post-office.png",
+    "390-stamp-album.png",
+    "390-write-letter.png",
+    "390-courier-selection.png",
+    "390-route-selection.png",
+    "390-journey.png",
+    "390-encounter.png",
+    "390-story-postcard.png",
+    "768-post-office.png",
+    "768-stamp-album.png",
+    "768-write-letter.png",
+    "768-courier-selection.png",
+    "768-route-selection.png",
+    "768-journey.png",
+    "768-encounter.png",
+    "768-story-postcard.png",
+    "1440-post-office.png",
+    "1440-stamp-album.png",
+    "1440-write-letter.png",
+    "1440-courier-selection.png",
+    "1440-route-selection.png",
+    "1440-journey.png",
+    "1440-encounter.png",
+    "1440-story-postcard.png",
+    "1920-post-office.png",
+    "1920-stamp-album.png",
+    "1920-write-letter.png",
+    "1920-courier-selection.png",
+    "1920-route-selection.png",
+    "1920-journey.png",
+    "1920-encounter.png",
+    "1920-story-postcard.png"
+  ],
+  "checks": [
+    {
+      "name": "post-office",
+      "width": 390,
+      "issues": []
+    },
+    {
+      "name": "stamp-album",
+      "width": 390,
+      "issues": []
+    },
+    {
+      "name": "write-letter",
+      "width": 390,
+      "issues": []
+    },
+    {
+      "name": "courier-selection",
+      "width": 390,
+      "issues": []
+    },
+    {
+      "name": "route-selection",
+      "width": 390,
+      "issues": []
+    },
+    {
+      "name": "journey",
+      "width": 390,
+      "issues": []
+    },
+    {
+      "name": "encounter",
+      "width": 390,
+      "issues": []
+    },
+    {
+      "name": "story-postcard",
+      "width": 390,
+      "issues": []
+    },
+    {
+      "name": "post-office",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "name": "stamp-album",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "name": "write-letter",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "name": "courier-selection",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "name": "route-selection",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "name": "journey",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "name": "encounter",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "name": "story-postcard",
+      "width": 768,
+      "issues": []
+    },
+    {
+      "name": "post-office",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "name": "stamp-album",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "name": "write-letter",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "name": "courier-selection",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "name": "route-selection",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "name": "journey",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "name": "encounter",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "name": "story-postcard",
+      "width": 1440,
+      "issues": []
+    },
+    {
+      "name": "post-office",
+      "width": 1920,
+      "issues": []
+    },
+    {
+      "name": "stamp-album",
+      "width": 1920,
+      "issues": []
+    },
+    {
+      "name": "write-letter",
+      "width": 1920,
+      "issues": []
+    },
+    {
+      "name": "courier-selection",
+      "width": 1920,
+      "issues": []
+    },
+    {
+      "name": "route-selection",
+      "width": 1920,
+      "issues": []
+    },
+    {
+      "name": "journey",
+      "width": 1920,
+      "issues": []
+    },
+    {
+      "name": "encounter",
+      "width": 1920,
+      "issues": []
+    },
+    {
+      "name": "story-postcard",
+      "width": 1920,
+      "issues": []
+    },
+    {
+      "name": "ten-deliveries-and-double-click-sfx",
+      "pass": true
+    },
+    {
+      "name": "keyboard-tab-home-end-confirm",
+      "pass": true
+    },
+    {
+      "name": "missing-metadata-and-atlas-do-not-lock-reduced-motion",
+      "pass": true
+    }
+  ],
+  "failures": []
+}
